@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <title>Night Sky - Widgets</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="css/jquery-ui-1.8.16.custom.css" media="screen"  />
+    <link rel="stylesheet" href="css/fullcalendar.css" media="screen"  />
+    <link rel="stylesheet" href="css/chosen.css" media="screen"  />
+    <link rel="stylesheet" href="css/glisse.css?1.css">
+    <link rel="stylesheet" href="css/jquery.jgrowl.css">
+    <link rel="stylesheet" href="css/demo_table.css" >
+    <link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.4" media="screen" />
+    
+	<link rel="stylesheet" href="css/icon/font-awesome.css">    
+    <link rel="stylesheet" href="css/bootstrap-responsive.css">
+    
+    <link rel="alternate stylesheet" type="text/css" media="screen" title="green-theme" href="css/color/green.css" />
+	<link rel="alternate stylesheet" type="text/css" media="screen" title="red-theme" href="css/color/red.css" />
+	<link rel="alternate stylesheet" type="text/css" media="screen" title="blue-theme" href="css/color/blue.css" />
+    <link rel="alternate stylesheet" type="text/css" media="screen" title="orange-theme" href="css/color/orange.css" />
+    <link rel="alternate stylesheet" type="text/css" media="screen" title="purple-theme" href="css/color/purple.css" />
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+     <script language="JavaScript">
+	Firefox = navigator.userAgent.indexOf("Firefox") >= 0;
+	if(Firefox) document.write("<link rel='stylesheet' href='css/moz.css' type='text/css'>"); 
+	</script>
+    
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="favicon.ico">
+    
+  </head>
+
+  <body>
+    <!--BEGIN HEADER-->
+    <div id="header" role="banner">
+       <a id="menu-link" class="head-button-link menu-hide" href="#menu"><span>Menu</span></a>
+       <!--Logo--><a href="dashboard.html" class="logo"><h1>Night Sky</h1></a><!--Logo END-->
+       
+       <!--Search-->
+       <form class="search" action="#">
+         <input type="text" name="q" placeholder="Search...">
+       </form>
+       <!--Search END-->
+       
+       <div class="right">
+       
+       <!--message box-->
+         <div class="dropdown left">
+          
+          <a class="dropdown-toggle head-button-link" data-toggle="dropdown" href="#"><span class="notice-new">3</span></a> 
+          
+          <div class="dropdown-menu pull-right messages-list">
+          <div class="triangle"></div>
+          
+            <div class="notice-title">You Have 3 Massages</div>
+            <!--message #1-->
+            <div class="notice-message">
+            <a href="#" class="box">
+              <div class="avatar"><img src="images/avatar-2.png" alt=""></div>
+              <div class="info">
+                <div class="author">Csaba Gyulai</div>
+                <div class="date">Jan 9, 2013</div>
+                <div class="clearfix"></div>
+                <div class="text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit.</div>
+              </div>
+              <div class="clearfix"></div>
+            </a>
+            </div>
+            <!--message #2-->
+            <div class="notice-message">
+            <a href="#" class="box">
+              <div class="avatar"><img src="images/avatar-3.png" alt=""></div>
+              <div class="info">
+                <div class="author">Junkyard Sam</div>
+                <div class="date">Jan 15, 2013</div>
+                <div class="clearfix"></div>
+                <div class="text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit.</div>
+              </div>
+              <div class="clearfix"></div>
+            </a>
+            </div>
+            <!--message #3-->
+            <div class="notice-message">
+            <a href="#" class="box">
+              <div class="avatar"><img src="images/avatar-4.png" alt=""></div>
+              <div class="info">
+                <div class="author">Lienke Raben</div>
+                <div class="date">Nov 4, 2012</div>
+                <div class="clearfix"></div>
+                <div class="text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit.</div>
+              </div>
+              <div class="clearfix"></div>
+            </a>
+            </div>
+           
+            <a href="#" class="notice-more">View All Messages</a>
+          </div>
+        </div>
+       <!--message box end-->
+       
+       <!--notification box-->
+         <div class="dropdown left">
+          <a class="dropdown-toggle head-button-link notification" data-toggle="dropdown" href="#"><span class="notice-new">2</span></a>
+          
+          <div class="dropdown-menu pull-right messages-list">
+          <div class="triangle"></div>
+          
+            <div class="notice-title">You Have 2 Notifications</div>
+            <!--message #1-->
+            <div class="notice-message">
+            <a href="#" class="box">
+              <div class="avatar"><img src="images/avatar-5.png" alt=""></div>
+              <div class="info">
+                <div class="author">Jonas Anderson</div>
+                <div class="date">3 hours ago</div>
+                <div class="clearfix"></div>
+                <div class="text">Followed <span class="follow-link">Dennis Salvatier</span></div>
+              </div>
+              <div class="clearfix"></div>
+            </a>
+            </div>
+            <!--message #2-->
+            <div class="notice-message">
+            <a href="#" class="box">
+              <div class="avatar"><img src="images/avatar-6.png" alt=""></div>
+              <div class="info">
+                <div class="author">Ilias Sounas</div>
+                <div class="date">19 hours ago</div>
+                <div class="clearfix"></div>
+                <div class="text">Commented on <span class="comment-link">Angry Cloud</span></div>
+              </div>
+              <div class="clearfix"></div>
+            </a>
+            </div>
+            <!--message #3-->
+            <div class="notice-message">
+            <a href="#" class="box">
+              <div class="avatar"><img src="images/avatar-7.png" alt=""></div>
+              <div class="info">
+                <div class="author">Erin Hunting</div>
+                <div class="date">19 hours ago</div>
+                <div class="clearfix"></div>
+                <div class="text">Liked <span class="like-link">Overnight work</span></div>
+              </div>
+              <div class="clearfix"></div>
+            </a>
+            </div>
+           
+            <a href="#" class="notice-more">View All Notification</a>
+          </div>
+        </div>
+       <!--notification box end-->
+       
+       <!--config box-->
+         <div class="dropdown left">
+          <a class="dropdown-toggle head-button-link config" data-toggle="dropdown" href="#"></a>
+          <div class="dropdown-menu pull-right settings-box">
+          <div class="triangle-2"></div>
+          
+			<a href="javascript:chooseStyle('none', 30)" class="settings-link"></a>
+            <a href="javascript:chooseStyle('blue-theme', 30)" class="settings-link blue"></a>
+            <a href="javascript:chooseStyle('green-theme', 30)" class="settings-link green"></a>
+            <a href="javascript:chooseStyle('purple-theme', 30)" class="settings-link purple"></a>
+            <a href="javascript:chooseStyle('orange-theme', 30)" class="settings-link yellow"></a>
+            <a href="javascript:chooseStyle('red-theme', 30)" class="settings-link red"></a>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+       <!--config box end-->
+       
+       <!--profile box-->
+         <div class="dropdown left profile">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <span class="double-spacer"></span>
+            <div class="profile-avatar"><img src="images/avatar.png" alt=""></div>
+            <div class="profile-username"><span>Welcome,</span> John Doe!</div>
+            <div class="profile-caret"> <span class="caret"></span></div>
+            <span class="double-spacer"></span>
+          </a>
+          <div class="dropdown-menu pull-right profile-box">
+          <div class="triangle-3"></div>
+          
+            <ul class="profile-navigation">
+              <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
+              <li><a href="#"><i class="icon-cog"></i> Settings</a></li>
+              <li><a href="#"><i class="icon-info-sign"></i> Help</a></li>
+              <li><a href="index.html"><i class="icon-off"></i> Logout</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+       <!--profile box end-->
+       
+       </div>
+       
+      
+    </div>
+    <!--END HEADER-->
+    
+    <div id="wrap">
+    
+    
+    	<!--BEGIN SIDEBAR-->
+        <div id="menu" role="navigation">
+        
+          <ul class="main-menu">
+             <li><a href="dashboard.html"><i class="general"></i> General</a></li>
+             <li class="active"><a href="ui.html"><i class="components"></i> UI</a></li>
+             <li><a href="forms.html"><i class="forms"></i> Forms</a></li>
+             <li><a href="charts.html"><i class="statistics"></i> Statistics</a></li>
+             <li><a href="typo.html"><i class="pages"></i> Pages</a></li>
+             <li><a href="tables.html"><i class="tables"></i> Tables</a></li>
+             <li><a href="contacts.html"><i class="bonus"></i> Bonus</a></li>
+          </ul>
+          
+          <ul class="additional-menu">
+             <li><a href="ui.html"><i class="icon-random"></i> UI</a></li>
+             <li class="active"><a href="widgets.html"><i class="icon-eye-close"></i> Widgets</a></li>
+             <li><a href="buttons.html"><i class="icon-tint"></i> Buttons</a></li>
+             <li><a href="icons.html"><i class="icon-star"></i> Icons</a></li>
+          </ul>
+          
+          <!--New Files-->
+          <div class="new-files">
+             <div class="title">New Files</div>
+             
+             <div class="files">
+               <div class="file">
+                  <div class="file-format"><img src="images/icon/file_pdf.png" alt=""></div>
+                  <div class="file-info">
+                    <div class="file-name">Mani_CV.pdf <a href="#"><i class="icon-remove"></i></a></div>
+                    <div class="file-date">January 30, 2013</div>
+                  </div>
+                </div>
+                <div class="file">
+                  <div class="file-format"><img src="images/icon/file_doc.png" alt=""></div>
+                  <div class="file-info">
+                    <div class="file-name">Mani_CV.doc <a href="#"><i class="icon-remove"></i></a></div>
+                    <div class="file-date">January 30, 2013</div>
+                  </div>
+                </div>
+                <div class="file">
+                  <div class="file-format"><img src="images/icon/file_jpg.png" alt=""></div>
+                  <div class="file-info">
+                    <div class="file-name">Mani_CV.jpg <a href="#"><i class="icon-remove"></i></a></div>
+                    <div class="file-date">January 30, 2013</div>
+                  </div>
+                </div>
+                <div class="file">
+                  <div class="file-format"><img src="images/icon/file_xls.png" alt=""></div>
+                  <div class="file-info">
+                    <div class="file-name">Mani_CV.xls <a href="#"><i class="icon-remove"></i></a></div>
+                    <div class="file-date">January 30, 2013</div>
+                  </div>
+                </div>
+                <div class="file">
+                  <div class="file-format"><img src="images/icon/file_zip.png" alt=""></div>
+                  <div class="file-info">
+                    <div class="file-name">Mani_CV.zip <a href="#"><i class="icon-remove"></i></a></div>
+                    <div class="file-date">January 30, 2013</div>
+                  </div>
+                </div>
+                <div class="file">
+                  <div class="file-format"><img src="images/icon/file_txt.png" alt=""></div>
+                  <div class="file-info">
+                    <div class="file-name">Mani_CV.txt <a href="#"><i class="icon-remove"></i></a></div>
+                    <div class="file-date">January 30, 2013</div>
+                  </div>
+                </div>
+               
+             </div>
+          </div>
+          <!--New Files END-->
+          
+          <!--Upload Box-->
+          <div class="upload-box">Drop files <br> here to upload</div>
+          <!--Upload Box END-->
+          
+          <!--Media Files-->
+          <div class="media-files">
+             <div class="title">Media Files</div>
+             <p>This is Photoshop's version  of Lorem Ipsum.</p>
+             
+             <div class="media-files-info-box">
+                <i class="icon-picture"></i> Photo <strong>35%</strong>
+                <div class="process-progress"> <div class="advance red" style="width:35%"></div> </div> 
+             </div>
+             <div class="media-files-info-box">
+                <i class="icon-facetime-video"></i> Video <strong>43%</strong>
+                <div class="process-progress"> <div class="advance blue" style="width:43%"></div> </div> 
+             </div>
+             <div class="media-files-info-box">
+                <i class="icon-music"></i> Audio <strong>23%</strong>
+                <div class="process-progress"> <div class="advance green" style="width:23%"></div> </div>
+             </div>
+          </div>
+          <!--Media Files END-->
+          
+          <!--Add New Widget-->
+          <a href="#" class="add-widget-link">Add New Widget</a>
+          <!--Add New Widget END-->
+          
+          <div class="clearfix"></div>
+          
+          
+        </div>
+        <!--SIDEBAR END-->
+    
+    	
+        <!--BEGIN MAIN CONTENT-->
+        <div id="main" role="main">
+          <div class="block">
+   		  <div class="clearfix"></div>
+            
+             <!--page title-->
+             <div class="pagetitle">
+                <h1>Widgets.</h1> 
+                <div class="btn-group">
+                  <button class="btn">Day</button>
+                  <button class="btn">Week</button>
+                  <button class="btn">Month</button>
+                </div>
+                <div class="clearfix"></div>
+             </div>
+             <!--page title end-->
+             
+             <!--Informatin BOX 3-->
+              <div class="information-box-3">
+                    <div class="item">
+                      <div class="box-info">
+                        <img src="images/icon/stats_1.png" alt=""> 
+                        <div class="box-figures">345.23K</div>
+                        <div class="box-title">1 256, 00 $</div>
+                      </div>
+                    </div>
+                    <div class="item">
+                        <div class="box-info">
+                        <img src="images/icon/stats_2.png" alt=""> 
+                        <div class="box-figures">345.23K</div>
+                        <div class="box-title">1 256, 00 $</div>
+                      </div>
+                    </div>
+                    <div class="item">
+                    	<div class="box-info">
+                        <img src="images/icon/stats_3.png" alt=""> 
+                        <div class="box-figures">345.23K</div>
+                        <div class="box-title">1 256, 00 $</div>
+                      </div>
+                    </div>
+              </div>
+              <!--Informatin BOX 3 END-->
+              
+              <div class="row-fluid">    
+              <!--Chat-->
+              <div class="grid span6">
+              
+              <div class="grid-title">
+               <div class="pull-left">
+                  <div class="icon-title"><i class="icon-comment"></i></div>
+                  <span>Chat</span> 
+                  <div class="clearfix"></div>
+               </div>
+               <div class="pull-right"> 
+               	  <div class="icon-title"><a href="#"><i class="icon-refresh"></i></a></div>
+                  <div class="icon-title"><a href="#"><i class="icon-cog"></i></a></div>
+               </div>
+              <div class="clearfix"></div>   
+              </div>
+            
+                 <div class="friends chat">
+                
+                  <div class="friend">
+                  <img src="images/avatar-12.png" alt="" class="f-avatar">
+                  <div class="f-info">
+                  	<div class="f-name">John Doe <img src="images/icon/chat_on.png" alt=""> <span>23 hour ago.</span></div>
+                    <div class="f-text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  </div>
+                  
+                  <div class="friend">
+                  <img src="images/avatar-11.png" alt="" class="f-avatar">
+                  <div class="f-info">
+                  	<div class="f-name">Bobby Ginn <img src="images/icon/chat_off.png" alt=""> <span>20 hour ago.</span></div>
+                    <div class="f-text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  </div>
+                  
+                  <div class="friend">
+                  <img src="images/avatar-12.png" alt="" class="f-avatar">
+                  <div class="f-info">
+                  	<div class="f-name">John Doe <img src="images/icon/chat_on.png" alt=""> <span>19 hour ago.</span></div>
+                    <div class="f-text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  </div>
+                  
+                  <div class="friend">
+                  <img src="images/avatar-11.png" alt="" class="f-avatar">
+                  <div class="f-info">
+                  	<div class="f-name">Bobby Ginn <img src="images/icon/chat_off.png" alt=""> <span>19 hour ago.</span></div>
+                    <div class="f-text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  </div>
+                  
+                 </div>
+
+                 <form  class="chat-form">
+                     <input class="input span" type="text" placeholder="Your message...">
+                     <button class="btn btn-primary metro" type="button">Send</button>
+                     <button class="btn metro" type="button">Cancel</button>
+				 </form>
+              
+              </div>
+              <!--Chat END-->
+              
+              <!--friends-->
+              <div class="grid span6">
+              
+              <div class="grid-title">
+               <div class="pull-left">
+                  <div class="icon-title"><i class="icon-user"></i></div>
+                  <span>Friends</span> 
+                  <div class="clearfix"></div>
+               </div>
+               <div class="pull-right"> 
+               	  <div class="icon-title"><a href="#"><i class="icon-refresh"></i></a></div>
+                  <div class="icon-title"><a href="#"><i class="icon-cog"></i></a></div>
+               </div>
+              <div class="clearfix"></div>   
+              </div>
+            
+              <div class="grid-content overflow">
+                <div class="friends">
+                 <div class="friend">
+                  <img src="images/avatar-11.png" alt="" class="f-avatar">
+                  <div class="f-actions">
+                 	<a href="#">Unfriend</a>
+                  </div>
+                  <div class="f-info">
+                  	<div class="f-name">Bobby Ginn</div>
+                    <div class="f-text">Pro Cookies Eanter</div>
+                  </div>
+                  <div class="clearfix"></div>
+                  </div>
+                  
+                  <div class="friend">
+                  <img src="images/avatar-10.png" alt="" class="f-avatar">
+                  <div class="f-actions">
+                 	<a href="#">Unfriend</a>
+                  </div>
+                  <div class="f-info">
+                  	<div class="f-name">Bluroon</div>
+                    <div class="f-text">Dark UI Kit</div>
+                  </div>
+                  <div class="clearfix"></div>
+                  </div>
+                  
+                  <div class="friend">
+                  <img src="images/avatar-9.png" alt="" class="f-avatar">
+                  <div class="f-actions">
+                 	<a href="#">Unfriend</a>
+                  </div>
+                  <div class="f-info">
+                  	<div class="f-name">Tom Brenn...</div>
+                    <div class="f-text">Simple</div>
+                  </div>
+                  <div class="clearfix"></div>
+                  </div>
+                  
+                  <div class="friend">
+                  <img src="images/avatar-8.png" alt="" class="f-avatar">
+                  <div class="f-actions">
+                 	<a href="#">Unfriend</a>
+                  </div>
+                  <div class="f-info">
+                  	<div class="f-name">Fabio Basile</div>
+                    <div class="f-text">Updated</div>
+                  </div>
+                  <div class="clearfix"></div>
+                  </div>
+                
+               </div>
+              <div class="clearfix"></div>
+              </div>
+              
+              </div>
+              <!--friends END-->
+              </div>
+              
+             <!--quick stats box-->
+             <div class="grid-transparent row-fluid quick-stats-box">
+               <div class="span3">
+             	    <span>21</span> twetts
+               </div>
+               <div class="span3 red">
+                 	<span>11</span> COMMENTS
+               </div>
+               <div class="span3 orange">
+              		<span>28</span> photos
+               </div>
+               <div class="span3 green">
+               		<span>51</span> followerss
+               </div>  
+             </div>
+             <div class="clearfix"></div>
+             <!--quick stats box END-->
+             
+             <div class="row-fluid">
+              <!--Twitter Widget-->
+              <div class="grid span6">
+              
+              <div class="grid-title">
+               <div class="pull-left">
+                  <div class="icon-title"><i class="icon-comments"></i></div>
+                  <span>Twitter Widget</span> 
+                  <div class="clearfix"></div>
+               </div>
+               <div class="pull-right"> 
+               	  <div class="icon-title"><a href="#"><i class="icon-refresh"></i></a></div>
+                  <div class="icon-title"><a href="#"><i class="icon-cog"></i></a></div>
+               </div>
+              <div class="clearfix"></div>   
+              </div>
+            
+              <div class="grid-content overflow">
+                <div class="friends">
+                
+                 <div class="friend">
+                  <img src="images/avatar-14.png" alt="" class="f-avatar">
+                  <div class="f-info">
+                  	<div class="f-name">Maykel Loomans</div>
+                    <div class="f-text">Cras sit amet nibh libero, in gravida nulla.</div>
+                  </div>
+                  <div class="t-foot">
+                      <div class="t-date">23 hour ago.</div>
+                      <div class="t-retweet"><a href="#"><i class="icon-share-alt"></i></a></div>
+                    </div>
+                  <div class="clearfix"></div>
+                  </div>
+                  
+                  <div class="friend">
+                  <img src="images/avatar-13.png" alt="" class="f-avatar">
+                  <div class="f-info">
+                  	<div class="f-name">Bobby Giangeruso</div>
+                    <div class="f-text">Cras sit amet nibh libero, in gravida nulla.</div>
+                  </div>
+                  <div class="t-foot">
+                      <div class="t-date">23 hour ago.</div>
+                      <div class="t-retweet"><a href="#"><i class="icon-share-alt"></i></a></div>
+                    </div>
+                  <div class="clearfix"></div>
+                  </div>
+                  
+                  <div class="friend">
+                  <img src="images/avatar-12.png" alt="" class="f-avatar">
+                  <div class="f-info">
+                  	<div class="f-name">Simon Gustavsson</div>
+                    <div class="f-text">Cras sit amet nibh libero, in gravida nulla.</div>
+                  </div>
+                  <div class="t-foot">
+                      <div class="t-date">23 hour ago.</div>
+                      <div class="t-retweet"><a href="#"><i class="icon-share-alt"></i></a></div>
+                    </div>
+                  <div class="clearfix"></div>
+                  </div>
+                  
+                 </div>
+              </div>
+              
+              </div>
+              <!--Twitter Widget END-->
+              
+              <!--Take Notes-->
+              <div class="grid span6">
+              
+              <div class="grid-title">
+               <div class="pull-left">
+                  <div class="icon-title"><i class="icon-time"></i></div>
+                  <span>Take Notes</span> 
+                  <div class="clearfix"></div>
+               </div>
+               <div class="pull-right"> 
+              	  <div class="icon-title"><a href="#"><i class="icon-plus"></i></a></div>
+               	  <div class="icon-title"><a href="#"><i class="icon-refresh"></i></a></div>
+                  <div class="icon-title"><a href="#"><i class="icon-trash"></i></a></div>
+               </div>
+              <div class="clearfix"></div>   
+              </div>
+            
+              <div class="grid-content padding-none">
+                <div class="notes">
+                  
+                  <!---->
+                  <div class="note">
+                    <div class="note-status"><i class="note-done"></i></div> 
+                    <div class="note-name">Clean the house</div>
+                    <div class="note-date">Today</div>
+                    <div class="clearfix"></div>
+                  </div>
+                   <!---->
+                  <div class="note no-done">
+                    <div class="note-status"><i class="note-done"></i></div> 
+                    <div class="note-name">Take out the trash</div>
+                    <div class="note-date">5.00AM</div>
+                    <div class="clearfix"></div>
+                  </div>
+                   <!---->
+                  <div class="note">
+                    <div class="note-status"><i class="note-done"></i></div> 
+                    <div class="note-name">Do the dlishes</div>
+                    <div class="note-date blue">12 May</div>
+                    <div class="clearfix"></div>
+                  </div>
+                   <!---->
+                  <div class="note">
+                    <div class="note-status"><i class="note-done"></i></div> 
+                    <div class="note-name">Feed the dog</div>
+                    <div class="note-date blue">15 May</div>
+                    <div class="clearfix"></div>
+                  </div>
+                   <!---->
+                  <div class="note  no-done">
+                    <div class="note-status"><i class="note-done"></i></div> 
+                    <div class="note-name">Mow the lawn</div>
+                    <div class="note-date orange">21 May</div>
+                    <div class="clearfix"></div>
+                  </div>
+                   <!---->
+                  <div class="note  no-done">
+                    <div class="note-status"><i class="note-done"></i></div> 
+                    <div class="note-name">Clean the pool</div>
+                    <div class="note-date green">24 May</div>
+                    <div class="clearfix"></div>
+                  </div>
+                   <!---->
+                  <div class="note  no-done">
+                    <div class="note-status"><i class="note-done"></i></div> 
+                    <div class="note-name">Take out the trash</div>
+                    <div class="note-date green">28 May</div>
+                    <div class="clearfix"></div>
+                  </div>
+                   <!---->
+                 <div class="note">
+                    <div class="note-status"><i class="note-done"></i></div> 
+                    <div class="note-name">Clean the house</div>
+                    <div class="note-date">Today</div>
+                    <div class="clearfix"></div>
+                  </div>
+                   <!---->
+                  <div class="note no-done">
+                    <div class="note-status"><i class="note-done"></i></div> 
+                    <div class="note-name">Take out the trash</div>
+                    <div class="note-date">5.00AM</div>
+                    <div class="clearfix"></div>
+                  </div>
+                   <!---->
+                  <div class="note">
+                    <div class="note-status"><i class="note-done"></i></div> 
+                    <div class="note-name">Do the dlishes</div>
+                    <div class="note-date blue">12 May</div>
+                    <div class="clearfix"></div>
+                  </div>
+                   <!---->
+                  <div class="note">
+                    <div class="note-status"><i class="note-done"></i></div> 
+                    <div class="note-name">Feed the dog</div>
+                    <div class="note-date blue">15 May</div>
+                    <div class="clearfix"></div>
+                  </div>
+                   <!---->
+                  <div class="note  no-done">
+                    <div class="note-status"><i class="note-done"></i></div> 
+                    <div class="note-name">Mow the lawn</div>
+                    <div class="note-date orange">21 May</div>
+                    <div class="clearfix"></div>
+                  </div>
+                   <!---->
+                  <div class="note  no-done">
+                    <div class="note-status"><i class="note-done"></i></div> 
+                    <div class="note-name">Clean the pool</div>
+                    <div class="note-date green">24 May</div>
+                    <div class="clearfix"></div>
+                  </div>
+                   <!---->
+                  
+                </div>
+              <div class="clearfix"></div>
+              </div>
+              
+              </div>
+              <!--Take Notes END-->
+              </div>
+              
+              <!--Modal Start-->
+                <div class="grid">
+                    <div class="grid-title">
+                      <div class="pull-left">
+                      <div class="icon-title"><i class="icon-bookmark"></i></div>
+                      <span>Modal</span> 
+                      <div class="clearfix"></div>
+                   </div>
+                   <div class="pull-right"> 
+                      <div class="icon-title"><a href="#"><i class="icon-refresh"></i></a></div>
+                      <div class="icon-title"><a href="#"><i class="icon-trash"></i></a></div>
+                   </div>
+                  <div class="clearfix"></div>   
+                  </div>
+              
+                  <div class="grid-content">
+                     <div class="btn-modal">
+                              <button data-target="#basic-modal" data-toggle="modal" class="btn btn-primary metro">Basic Modal</button>
+                              <button data-target="#header-modal" data-toggle="modal" class="btn btn-warning metro">Modal with Header</button>
+                              <button data-target="#anim-modal" data-toggle="modal" class="btn btn-success metro">Animated Modal</button>
+                     </div>
+                                                        
+                                                        <div id="basic-modal" class="modal hide">
+                                                            <div class="modal-body">
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec massa tellus, vestibulum consectetur vulputate eget, posuere adipiscing odio. Aliquam vestibulum sodales lectus, eu blandit lorem.</p>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <a href="#" class="btn btn-primary metro" data-dismiss="modal">Close</a>
+                                                            </div>
+                                                        </div>
+                                                        <div id="header-modal" class="modal hide">
+                                                            <div class="modal-header">
+                                                                <button class="close" type="button" data-dismiss="modal">&times;</button>
+                                                                This is a modal header
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec massa tellus, vestibulum consectetur vulputate eget, posuere adipiscing odio. Aliquam vestibulum sodales lectus, eu blandit lorem.</p>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <a href="#" class="btn btn-primary metro" data-dismiss="modal">Close</a>
+                                                            </div>
+                                                        </div>
+                                                        <div id="anim-modal" class="modal fade hide">
+                                                            <div class="modal-header">
+                                                                <button class="close" type="button" data-dismiss="modal">&times;</button>
+                                                                This is a modal header
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec massa tellus, vestibulum consectetur vulputate eget, posuere adipiscing odio. Aliquam vestibulum sodales lectus, eu blandit lorem.</p>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <a href="#" class="btn btn-primary metro" data-dismiss="modal">Close</a>
+                                                            </div>
+                                                        </div>
+                   <div class="clearfix"></div>
+        
+                  </div>
+                </div>
+                <!--Modal END-->
+                
+              <div class="row-fluid">    
+              <!--Comments-->
+              <div class="grid span6">
+              
+              <div class="grid-title">
+               <div class="pull-left">
+                  <div class="icon-title"><i class="icon-comment"></i></div>
+                  <span>Comments</span> 
+                  <div class="clearfix"></div>
+               </div>
+               <div class="pull-right"> 
+               	  <div class="icon-title"><a href="#"><i class="icon-refresh"></i></a></div>
+                  <div class="icon-title"><a href="#"><i class="icon-cog"></i></a></div>
+               </div>
+              <div class="clearfix"></div>   
+              </div>
+            
+              <div class="grid-content overflow">
+              
+              <div class="comments">
+              
+             	 <div class="comment">
+                  <div class="comment-info-1">
+                    <img src="images/avatar-15.png" alt="" class="comment-avatar">
+                    <a href="#"><img src="images/icon/table_view.png" alt=""></a> <a href="#"><img src="images/icon/table_edit.png" alt=""></a> <a href="#"><img src="images/icon/table_del.png" alt=""></a>
+                  </div>
+                  <div class="comment-info-2">
+                  	<div class="comment-name">Dan Morgan</div>
+                    <div class="comment-date">March 28, 2013</div>
+                    <a href="#" class="comment-link">This is Photoshop's version  of Lorem Ipsum.</a>
+                  </div>
+                  <div class="clearfix"></div>
+                 </div>
+                 <div class="comment">
+                  <div class="comment-info-1">
+                    <img src="images/avatar-16.png" alt="" class="comment-avatar">
+                    <a href="#"><img src="images/icon/table_view.png" alt=""></a> <a href="#"><img src="images/icon/table_edit.png" alt=""></a> <a href="#"><img src="images/icon/table_del.png" alt=""></a>
+                  </div>
+                  <div class="comment-info-2">
+                  	<div class="comment-name">James Puckett</div>
+                    <div class="comment-date">March 28, 2013</div>
+                    <a href="#" class="comment-link">This is Photoshop's version  of Lorem Ipsum.</a>
+                  </div>
+                  <div class="clearfix"></div>
+                 </div>
+                 <div class="comment">
+                  <div class="comment-info-1">
+                    <img src="images/avatar-17.png" alt="" class="comment-avatar">
+                    <a href="#"><img src="images/icon/table_view.png" alt=""></a> <a href="#"><img src="images/icon/table_edit.png" alt=""></a> <a href="#"><img src="images/icon/table_del.png" alt=""></a>
+                  </div>
+                  <div class="comment-info-2">
+                  	<div class="comment-name">Haraldur Thorleifsson</div>
+                    <div class="comment-date">March 28, 2013</div>
+					<a href="#" class="comment-link">This is Photoshop's version  of Lorem Ipsum.</a>
+                  </div>
+                  <div class="clearfix"></div>
+                 </div>
+              
+              </div>
+              
+              </div> 
+              
+              <div class="clearfix"></div>
+              </div>
+              <!--Comments END-->
+              
+              <!--News-->
+              <div class="grid span6">
+              
+              <div class="grid-title">
+               <div class="pull-left">
+                  <div class="icon-title"><i class="icon-book"></i></div>
+                  <span>News</span> 
+                  <div class="clearfix"></div>
+               </div>
+               <div class="pull-right"> 
+               	  <div class="icon-title"><a href="#"><i class="icon-refresh"></i></a></div>
+                  <div class="icon-title"><a href="#"><i class="icon-cog"></i></a></div>
+               </div>
+              <div class="clearfix"></div>   
+              </div>
+            
+              <div class="grid-content overflow">
+                
+               <div class="news-list">
+              
+             	 <div class="news">
+                  <div class="news-info-1">
+                    <img src="images/avatar-18.png" alt="" class="comment-avatar">
+                    <a href="#"><img src="images/icon/table_view.png" alt=""></a> <a href="#"><img src="images/icon/table_edit.png" alt=""></a> <a href="#"><img src="images/icon/table_del.png" alt=""></a>
+                  </div>
+                  <div class="news-info-2"> 
+                    <a href="#" class="news-link">This is Photoshop's version  of Lorem Ipsum.</a>
+                    <div class="news-text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, </div>
+                  </div>
+                  <div class="clearfix"></div>
+                 </div>
+                 
+                 <div class="news">
+                  <div class="news-info-1">
+                    <img src="images/avatar-19.png" alt="" class="comment-avatar">
+                    <a href="#"><img src="images/icon/table_view.png" alt=""></a> <a href="#"><img src="images/icon/table_edit.png" alt=""></a> <a href="#"><img src="images/icon/table_del.png" alt=""></a>
+                  </div>
+                  <div class="news-info-2"> 
+                    <a href="#" class="news-link">This is Photoshop's version  of Lorem Ipsum.</a>
+                    <div class="news-text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, </div>
+                  </div>
+                  <div class="clearfix"></div>
+                 </div>
+                 
+                 <div class="news">
+                  <div class="news-info-1">
+                    <img src="images/avatar-20.png" alt="" class="comment-avatar">
+                    <a href="#"><img src="images/icon/table_view.png" alt=""></a> <a href="#"><img src="images/icon/table_edit.png" alt=""></a> <a href="#"><img src="images/icon/table_del.png" alt=""></a>
+                  </div>
+                  <div class="news-info-2"> 
+                    <a href="#" class="news-link">This is Photoshop's version  of Lorem Ipsum.</a>
+                    <div class="news-text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, </div>
+                  </div>
+                  <div class="clearfix"></div>
+                 </div>
+              
+              </div>
+              <div class="clearfix"></div>
+              </div>
+              
+              </div>
+              <!--News END-->
+              </div>
+                
+                <!--Pop-Up Notifications Start-->
+                <div class="grid">
+                  <div class="grid-title">
+                      <div class="pull-left">
+                      <div class="icon-title"><i class="icon-flag"></i></div>
+                      <span>Pop-Up Notifications</span> 
+                      <div class="clearfix"></div>
+                   </div>
+                   <div class="pull-right"> 
+                      <div class="icon-title"><a href="#"><i class="icon-refresh"></i></a></div>
+                      <div class="icon-title"><a href="#"><i class="icon-trash"></i></a></div>
+                   </div>
+                  <div class="clearfix"></div>   
+                  </div>
+
+              
+                  <div class="grid-content">
+                     <div class="formRight distance">
+                                 <p><button type="submit" class="btn btn-primary metro" onclick="$.jGrowl('One more message...');"><span>Normal</span></button></p>
+                                 <p class="text-center"><button type="submit" class="btn btn-primary metro" onclick="$.jGrowl('Stick this!', { sticky: true });"><span>Sticky</span></button></p>
+                                 <p class="text-center"><button type="submit" class="btn btn-primary metro" onclick="$.jGrowl('A message with a header', { header: 'Important' });"><span>With header</span></button> </p> 
+                                 <p class="text-right"><button type="submit" class="btn btn-primary metro" onclick="$.jGrowl('A message that will live a little longer.', { life: 10000 });"><span>Longer life</span></button></p>
+                   </div>
+                   <div class="clearfix"></div>
+        
+                  </div>
+                </div>
+                <!--Pop-Up Notifications END-->
+
+      
+               <!--BEGIN FOOTER-->
+               <div class="footer">
+                  <div class="left">Copyright &copy; 2013</div>
+                  <div class="right"><a href="#">Buy Template</a></div>
+                  <div class="clearfix"></div>
+               </div>
+               <!--BEGIN FOOTER END-->
+              
+          <div class="clearfix"></div> 
+          </div><!--end .block-->
+        </div>
+        <!--MAIN CONTENT END-->
+    
+    </div>
+    <!--/#wrapper-->
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+   
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/google-code-prettify/prettify.js"></script>
+   
+    <script src="js/jquery.flot.js"></script>
+    <script src="js/jquery.flot.pie.js"></script>
+    <script src="js/jquery.flot.orderBars.js"></script>
+    <script src="js/jquery.flot.resize.js"></script>
+    <script src="js/jquery.flot.categories.js"></script>
+    <script src="js/graphtable.js"></script>
+    <script src="js/fullcalendar.min.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/autoresize.jquery.min.js"></script>
+    <script src="js/jquery.autotab.js"></script>
+    <script src="js/jquery.jgrowl_minimized.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/jquery.stepy.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/raphael.2.1.0.min.js"></script>
+    <script src="js/justgage.1.0.1.min.js"></script>
+	<script src="js/glisse.js"></script>
+	<script src="js/styleswitcher.js"></script>
+	<script src="js/moderniz.js"></script>
+    <script src="js/jquery.sparkline.min.js"></script>
+    <script src="js/slidernav-min.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.4"></script>
+    
+	<script>
+    Modernizr.load([
+        {
+         load: [
+                'js/main.js'
+            ],
+            complete: function()
+            {
+                $.fn.ready(function()
+                {
+                    window.App.init();
+                });
+            }
+        }
+    ]);
+    </script>
+	<script src="js/application.js"></script>
+
+
+  </body>
+</html>
+

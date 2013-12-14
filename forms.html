@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <title>Night Sky - Forms</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="css/jquery-ui-1.8.16.custom.css" media="screen"  />
+    <link rel="stylesheet" href="css/fullcalendar.css" media="screen"  />
+    <link rel="stylesheet" href="css/chosen.css" media="screen"  />
+    <link rel="stylesheet" href="css/glisse.css?1.css">
+    <link rel="stylesheet" href="css/jquery.jgrowl.css">
+    <link rel="stylesheet" href="css/demo_table.css" >
+    <link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.4" media="screen" />
+    
+	<link rel="stylesheet" href="css/icon/font-awesome.css">    
+    <link rel="stylesheet" href="css/bootstrap-responsive.css">
+    
+    <link rel="alternate stylesheet" type="text/css" media="screen" title="green-theme" href="css/color/green.css" />
+	<link rel="alternate stylesheet" type="text/css" media="screen" title="red-theme" href="css/color/red.css" />
+	<link rel="alternate stylesheet" type="text/css" media="screen" title="blue-theme" href="css/color/blue.css" />
+    <link rel="alternate stylesheet" type="text/css" media="screen" title="orange-theme" href="css/color/orange.css" />
+    <link rel="alternate stylesheet" type="text/css" media="screen" title="purple-theme" href="css/color/purple.css" />
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+     <script language="JavaScript">
+	Firefox = navigator.userAgent.indexOf("Firefox") >= 0;
+	if(Firefox) document.write("<link rel='stylesheet' href='css/moz.css' type='text/css'>"); 
+	</script>
+    
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="favicon.ico">
+    
+  </head>
+
+  <body>
+    <!--BEGIN HEADER-->
+    <div id="header" role="banner">
+       <a id="menu-link" class="head-button-link menu-hide" href="#menu"><span>Menu</span></a>
+       <!--Logo--><a href="dashboard.html" class="logo"><h1>Night Sky</h1></a><!--Logo END-->
+       
+       <!--Search-->
+       <form class="search" action="#">
+         <input type="text" name="q" placeholder="Search...">
+       </form>
+       <!--Search END-->
+       
+       <div class="right">
+       
+       <!--message box-->
+         <div class="dropdown left">
+          
+          <a class="dropdown-toggle head-button-link" data-toggle="dropdown" href="#"><span class="notice-new">3</span></a> 
+          
+          <div class="dropdown-menu pull-right messages-list">
+          <div class="triangle"></div>
+          
+            <div class="notice-title">You Have 3 Massages</div>
+            <!--message #1-->
+            <div class="notice-message">
+            <a href="#" class="box">
+              <div class="avatar"><img src="images/avatar-2.png" alt=""></div>
+              <div class="info">
+                <div class="author">Csaba Gyulai</div>
+                <div class="date">Jan 9, 2013</div>
+                <div class="clearfix"></div>
+                <div class="text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit.</div>
+              </div>
+              <div class="clearfix"></div>
+            </a>
+            </div>
+            <!--message #2-->
+            <div class="notice-message">
+            <a href="#" class="box">
+              <div class="avatar"><img src="images/avatar-3.png" alt=""></div>
+              <div class="info">
+                <div class="author">Junkyard Sam</div>
+                <div class="date">Jan 15, 2013</div>
+                <div class="clearfix"></div>
+                <div class="text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit.</div>
+              </div>
+              <div class="clearfix"></div>
+            </a>
+            </div>
+            <!--message #3-->
+            <div class="notice-message">
+            <a href="#" class="box">
+              <div class="avatar"><img src="images/avatar-4.png" alt=""></div>
+              <div class="info">
+                <div class="author">Lienke Raben</div>
+                <div class="date">Nov 4, 2012</div>
+                <div class="clearfix"></div>
+                <div class="text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit.</div>
+              </div>
+              <div class="clearfix"></div>
+            </a>
+            </div>
+           
+            <a href="#" class="notice-more">View All Messages</a>
+          </div>
+        </div>
+       <!--message box end-->
+       
+       <!--notification box-->
+         <div class="dropdown left">
+          <a class="dropdown-toggle head-button-link notification" data-toggle="dropdown" href="#"><span class="notice-new">2</span></a>
+          
+          <div class="dropdown-menu pull-right messages-list">
+          <div class="triangle"></div>
+          
+            <div class="notice-title">You Have 2 Notifications</div>
+            <!--message #1-->
+            <div class="notice-message">
+            <a href="#" class="box">
+              <div class="avatar"><img src="images/avatar-5.png" alt=""></div>
+              <div class="info">
+                <div class="author">Jonas Anderson</div>
+                <div class="date">3 hours ago</div>
+                <div class="clearfix"></div>
+                <div class="text">Followed <span class="follow-link">Dennis Salvatier</span></div>
+              </div>
+              <div class="clearfix"></div>
+            </a>
+            </div>
+            <!--message #2-->
+            <div class="notice-message">
+            <a href="#" class="box">
+              <div class="avatar"><img src="images/avatar-6.png" alt=""></div>
+              <div class="info">
+                <div class="author">Ilias Sounas</div>
+                <div class="date">19 hours ago</div>
+                <div class="clearfix"></div>
+                <div class="text">Commented on <span class="comment-link">Angry Cloud</span></div>
+              </div>
+              <div class="clearfix"></div>
+            </a>
+            </div>
+            <!--message #3-->
+            <div class="notice-message">
+            <a href="#" class="box">
+              <div class="avatar"><img src="images/avatar-7.png" alt=""></div>
+              <div class="info">
+                <div class="author">Erin Hunting</div>
+                <div class="date">19 hours ago</div>
+                <div class="clearfix"></div>
+                <div class="text">Liked <span class="like-link">Overnight work</span></div>
+              </div>
+              <div class="clearfix"></div>
+            </a>
+            </div>
+           
+            <a href="#" class="notice-more">View All Notification</a>
+          </div>
+        </div>
+       <!--notification box end-->
+       
+       <!--config box-->
+         <div class="dropdown left">
+          <a class="dropdown-toggle head-button-link config" data-toggle="dropdown" href="#"></a>
+          <div class="dropdown-menu pull-right settings-box">
+          <div class="triangle-2"></div>
+          
+            <a href="javascript:chooseStyle('none', 30)" class="settings-link"></a>
+            <a href="javascript:chooseStyle('blue-theme', 30)" class="settings-link blue"></a>
+            <a href="javascript:chooseStyle('green-theme', 30)" class="settings-link green"></a>
+            <a href="javascript:chooseStyle('purple-theme', 30)" class="settings-link purple"></a>
+            <a href="javascript:chooseStyle('orange-theme', 30)" class="settings-link yellow"></a>
+            <a href="javascript:chooseStyle('red-theme', 30)" class="settings-link red"></a>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+       <!--config box end-->
+       
+       <!--profile box-->
+         <div class="dropdown left profile">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <span class="double-spacer"></span>
+            <div class="profile-avatar"><img src="images/avatar.png" alt=""></div>
+            <div class="profile-username"><span>Welcome,</span> John Doe!</div>
+            <div class="profile-caret"> <span class="caret"></span></div>
+            <span class="double-spacer"></span>
+          </a>
+          <div class="dropdown-menu pull-right profile-box">
+          <div class="triangle-3"></div>
+          
+            <ul class="profile-navigation">
+              <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
+              <li><a href="#"><i class="icon-cog"></i> Settings</a></li>
+              <li><a href="#"><i class="icon-info-sign"></i> Help</a></li>
+              <li><a href="index.html"><i class="icon-off"></i> Logout</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+       <!--profile box end-->
+       
+       </div>
+       
+      
+    </div>
+    <!--END HEADER-->
+    
+    <div id="wrap">
+    
+    
+    	<!--BEGIN SIDEBAR-->
+        <div id="menu" role="navigation">
+        
+          <ul class="main-menu">
+             <li><a href="dashboard.html"><i class="general"></i> General</a></li>
+             <li><a href="ui.html"><i class="components"></i> UI</a></li>
+             <li class="active"><a href="forms.html"><i class="forms"></i> Forms</a></li>
+             <li><a href="charts.html"><i class="statistics"></i> Statistics</a></li>
+             <li><a href="typo.html"><i class="pages"></i> Pages</a></li>
+             <li><a href="tables.html"><i class="tables"></i> Tables</a></li>
+             <li><a href="contacts.html"><i class="bonus"></i> Bonus</a></li>
+          </ul>
+          
+          <ul class="additional-menu">
+             <li><a href="dashboard.html"><i class="icon-home"></i> Dashboard</a></li>
+             <li class="active"><a href="tables.html"><i class="icon-tasks"></i> Forms</a></li>
+			 <li><a href="#"><i class="icon-star"></i> Item 1</a></li>
+             <li><a href="#"><i class="icon-star"></i> Item 2</a></li>
+          </ul>
+          
+          <!--New Files-->
+          <div class="new-files">
+             <div class="title">New Files</div>
+             
+             <div class="files">
+               <div class="file">
+                  <div class="file-format"><img src="images/icon/file_pdf.png" alt=""></div>
+                  <div class="file-info">
+                    <div class="file-name">Mani_CV.pdf <a href="#"><i class="icon-remove"></i></a></div>
+                    <div class="file-date">January 30, 2013</div>
+                  </div>
+                </div>
+                <div class="file">
+                  <div class="file-format"><img src="images/icon/file_doc.png" alt=""></div>
+                  <div class="file-info">
+                    <div class="file-name">Mani_CV.doc <a href="#"><i class="icon-remove"></i></a></div>
+                    <div class="file-date">January 30, 2013</div>
+                  </div>
+                </div>
+                <div class="file">
+                  <div class="file-format"><img src="images/icon/file_jpg.png" alt=""></div>
+                  <div class="file-info">
+                    <div class="file-name">Mani_CV.jpg <a href="#"><i class="icon-remove"></i></a></div>
+                    <div class="file-date">January 30, 2013</div>
+                  </div>
+                </div>
+                <div class="file">
+                  <div class="file-format"><img src="images/icon/file_xls.png" alt=""></div>
+                  <div class="file-info">
+                    <div class="file-name">Mani_CV.xls <a href="#"><i class="icon-remove"></i></a></div>
+                    <div class="file-date">January 30, 2013</div>
+                  </div>
+                </div>
+                <div class="file">
+                  <div class="file-format"><img src="images/icon/file_zip.png" alt=""></div>
+                  <div class="file-info">
+                    <div class="file-name">Mani_CV.zip <a href="#"><i class="icon-remove"></i></a></div>
+                    <div class="file-date">January 30, 2013</div>
+                  </div>
+                </div>
+                <div class="file">
+                  <div class="file-format"><img src="images/icon/file_txt.png" alt=""></div>
+                  <div class="file-info">
+                    <div class="file-name">Mani_CV.txt <a href="#"><i class="icon-remove"></i></a></div>
+                    <div class="file-date">January 30, 2013</div>
+                  </div>
+                </div>
+               
+             </div>
+          </div>
+          <!--New Files END-->
+          
+          <!--Upload Box-->
+          <div class="upload-box">Drop files <br> here to upload</div>
+          <!--Upload Box END-->
+          
+          <!--Media Files-->
+          <div class="media-files">
+             <div class="title">Media Files</div>
+             <p>This is Photoshop's version  of Lorem Ipsum.</p>
+             
+             <div class="media-files-info-box">
+                <i class="icon-picture"></i> Photo <strong>35%</strong>
+                <div class="process-progress"> <div class="advance red" style="width:35%"></div> </div> 
+             </div>
+             <div class="media-files-info-box">
+                <i class="icon-facetime-video"></i> Video <strong>43%</strong>
+                <div class="process-progress"> <div class="advance blue" style="width:43%"></div> </div> 
+             </div>
+             <div class="media-files-info-box">
+                <i class="icon-music"></i> Audio <strong>23%</strong>
+                <div class="process-progress"> <div class="advance green" style="width:23%"></div> </div>
+             </div>
+          </div>
+          <!--Media Files END-->
+          
+          <!--Add New Widget-->
+          <a href="#" class="add-widget-link">Add New Widget</a>
+          <!--Add New Widget END-->
+          
+          <div class="clearfix"></div>
+          
+          
+        </div>
+        <!--SIDEBAR END-->
+    
+    	
+        <!--BEGIN MAIN CONTENT-->
+        <div id="main" role="main">
+          <div class="block">
+   		  <div class="clearfix"></div>
+            
+             <!--page title-->
+             <div class="pagetitle">
+                <h1>Forms.</h1> 
+                <div class="btn-group">
+                  <button class="btn">Day</button>
+                  <button class="btn">Week</button>
+                  <button class="btn">Month</button>
+                </div>
+                <div class="clearfix"></div>
+             </div>
+             <!--page title end-->
+             
+            <!--Input fields Start-->
+            <div class="grid">
+              <div class="grid-title">
+               <div class="pull-left">
+                  <div class="icon-title"><i class="icon-bookmark"></i></div>
+                  <span>Inputs</span> 
+                  <div class="clearfix"></div>
+               </div>
+               <div class="pull-right"> 
+               	  <div class="icon-title"><a href="#"><i class="icon-refresh"></i></a></div>
+                  <div class="icon-title"><a href="#"><i class="icon-user"></i></a></div>
+                  <div class="icon-title"><a href="#"><i class="icon-cog"></i></a></div>
+               </div>
+              <div class="clearfix"></div>   
+              </div>
+              <div class="grid-content">
+            	<div class="formRow">
+                        <label>Input text: </label>
+                        <div class="formRight">
+                            <input type="text" id="name" name="name" class="span input"> 
+                        </div>
+                 </div>
+                 
+                 <div class="formRow">
+                        <label>Input password:</label>
+                        <div class="formRight">
+                            <input type="password" id="pass1" name="pass1" class="span input"> 
+                        </div>
+                 </div>
+                 <div class="formRow">
+                        <label>Input - placeholder:</label>
+                        <div class="formRight">
+                            <input type="text" class="span input" placeholder="text"> 
+                        </div>
+                 </div>
+                 <div class="formRow">
+                        <label>Predefined value:</label>
+                        <div class="formRight">
+                            <input type="text" class="span input" value="http://"> 
+                        </div>
+                 </div>
+                 <div class="formRow">
+                        <label>Max 10 characters:</label>
+                        <div class="formRight">
+                            <input type="text" class="span input" maxlength="10"> 
+                        </div>
+                 </div>
+                 <div class="formRow">
+                        <label>Disabled field:</label>
+                        <div class="formRight">
+                            <input type="text" class="span input" value="message" disabled> 
+                        </div>
+                 </div>
+            	 <div class="formRow">
+                        <label>Select:</label>
+                        <div class="formRight">
+                         <select class="chzn-select chosen_select width-100"  >
+                            <option value=""></option> 
+                            <option value="United States">United States</option> 
+                            <option value="United Kingdom">United Kingdom</option> 
+                            <option value="Afghanistan">Afghanistan</option> 
+                            <option value="Albania">Albania</option> 
+                            <option value="Algeria">Algeria</option> 
+                            <option value="American Samoa">American Samoa</option> 
+                            <option value="Andorra">Andorra</option> 
+                            <option value="Angola">Angola</option> 
+                            <option value="Anguilla">Anguilla</option> 
+                            <option value="Antarctica">Antarctica</option> 
+                            <option value="Antigua and Barbuda">Antigua and Barbuda</option> 
+                            <option value="Argentina">Argentina</option> 
+                            <option value="Armenia">Armenia</option> 
+                            <option value="Aruba">Aruba</option> 
+                            <option value="Australia">Australia</option> 
+                            <option value="Austria">Austria</option> 
+                            <option value="Azerbaijan">Azerbaijan</option> 
+                            <option value="Bahamas">Bahamas</option> 
+                            <option value="Bahrain">Bahrain</option> 
+                            <option value="Bangladesh">Bangladesh</option> 
+                            <option value="Haiti">Haiti</option> 
+                            <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option> 
+                            <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option> 
+                            <option value="Honduras">Honduras</option> 
+                            <option value="Hong Kong">Hong Kong</option> 
+                            <option value="Hungary">Hungary</option> 
+                            <option value="Iceland">Iceland</option> 
+                            <option value="Tanzania, United Republic of">Tanzania, United Republic of</option> 
+                            <option value="Thailand">Thailand</option> 
+                            <option value="Timor-leste">Timor-leste</option> 
+                            <option value="Togo">Togo</option> 
+                            <option value="Tokelau">Tokelau</option> 
+                            <option value="Tonga">Tonga</option> 
+                            <option value="Trinidad and Tobago">Trinidad and Tobago</option> 
+                            <option value="Tunisia">Tunisia</option> 
+                            <option value="Turkey">Turkey</option> 
+                            <option value="Turkmenistan">Turkmenistan</option> 
+                            <option value="Turks and Caicos Islands">Turks and Caicos Islands</option> 
+                            <option value="Tuvalu">Tuvalu</option> 
+                            <option value="Uganda">Uganda</option> 
+                            <option value="Ukraine">Ukraine</option> 
+                            <option value="United Arab Emirates">United Arab Emirates</option> 
+                            <option value="United Kingdom">United Kingdom</option> 
+                            <option value="United States">United States</option> 
+                            <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option> 
+                            <option value="Uruguay">Uruguay</option> 
+                            <option value="Uzbekistan">Uzbekistan</option> 
+                            <option value="Vanuatu">Vanuatu</option> 
+                            <option value="Venezuela">Venezuela</option> 
+                            <option value="Viet Nam">Viet Nam</option> 
+                            <option value="Virgin Islands, British">Virgin Islands, British</option> 
+                            <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option> 
+                            <option value="Wallis and Futuna">Wallis and Futuna</option> 
+                            <option value="Western Sahara">Western Sahara</option> 
+                            <option value="Yemen">Yemen</option> 
+                            <option value="Zambia">Zambia</option> 
+                            <option value="Zimbabwe">Zimbabwe</option>
+                          </select>  
+                        </div>
+                 </div>
+
+                 <div class="formRow">
+                        <label>Multiple select:</label>
+                        <div class="formRight">
+                         <select data-placeholder="Your Favorite Types of Bear"  multiple class="chzn-select width-100" tabindex="8">
+                            <option value=""></option>
+                            <option>American Black Bear</option>
+                            <option>Asiatic Black Bear</option>
+                            <option>Brown Bear</option>
+                            <option>Giant Panda</option>
+                            <option>Sloth Bear</option>
+                            <option disabled>Sun Bear</option>
+                            <option>Polar Bear</option>
+                            <option disabled>Spectacled Bear</option>
+                          </select>
+ 
+                        </div>
+                     </div>
+                     <div class="formRow">
+                            <label>Usual textarea:</label>
+                            <div class="formRight">
+                                <textarea  class="span input same-height-1" name="message" rows="3"></textarea>
+                            </div>
+                     </div>
+    
+                     <div class="clearfix"></div>
+    
+              </div>    
+            </div>
+            <!--Input fields END-->
+            
+            <!--Additional input fields Start-->
+            <div class="grid">
+              <div class="grid-title">
+               <div class="pull-left">
+                  <div class="icon-title"><i class="icon-bookmark"></i></div>
+                  <span>Additional input fields</span> 
+                  <div class="clearfix"></div>
+               </div>
+               <div class="pull-right"> 
+               	  <div class="icon-title"><a href="#"><i class="icon-refresh"></i></a></div>
+                  <div class="icon-title"><a href="#"><i class="icon-user"></i></a></div>
+                  <div class="icon-title"><a href="#"><i class="icon-cog"></i></a></div>
+               </div>
+              <div class="clearfix"></div>   
+              </div>
+              <div class="grid-content">
+            	<div class="formRow">
+                            <label>Phone Number:</label>
+                            <div class="formRight">
+                                <div class="row-fluid">
+                                 <div class="span4"><input type="text" name="area_code" id="area_code" class="span input" maxlength="3" size="3" /></div>
+                                 <div class="span4"><input type="text" name="number1" id="number1" class="span input" maxlength="3" size="3"  /></div>
+                                 <div class="span4"><input type="text" name="number2" id="number2" class="span input" maxlength="4" size="5"  /></div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="formRow">
+                            <label>Social Number:</label>
+                            <div class="formRight">
+                                <div class="row-fluid">
+                                 <div class="span4"><input type="text" name="ssn1" id="ssn1" class="span input" maxlength="3" size="3" /></div>
+                                 <div class="span4"><input type="text" name="ssn2" id="ssn2" class="span input" maxlength="2" size="3" /></div>
+                                 <div class="span4"><input type="text" name="ssn3" id="ssn3" class="span input" maxlength="4" size="5" /></div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="formRow">
+                            <label>Text only:</label>
+                            <div class="formRight">
+                                <div class="row-fluid">
+                                 <div class="span4"><input type="text" name="text1" id="text1" class="span input" maxlength="5" size="4" /></div>
+                                 <div class="span4"><input type="text" name="text2" id="text2" class="span input" maxlength="4" size="4" /></div>
+                                 <div class="span4"><input type="text" name="text3" id="text3" class="span input" maxlength="5" size="4" /></div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="formRow">
+                            <label>Alpha only:</label>
+                            <div class="formRight">
+                                <div class="row-fluid">
+                                 <div class="span4"><input type="text" name="alpha1" id="alpha1" class="span input"  maxlength="5" size="4" /></div>
+                                 <div class="span4"><input type="text" name="alpha2" id="alpha2" class="span input"  maxlength="5" size="4" /></div>
+                                 <div class="span4"><input type="text" name="alpha3" id="alpha3" class="span input"  maxlength="5" size="4" /></div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="formRow">
+                            <label>Uppercase letters</label>
+                            <div class="formRight">
+                                <div class="row-fluid">
+                                 <div class="span4"><input type="text" name="alphanumeric1" id="alphanumeric1" class="span input"  maxlength="5" size="4" /></div>
+                                 <div class="span4"><input type="text" name="alphanumeric2" id="alphanumeric2" class="span input"  maxlength="5" size="4" /></div>
+                                 <div class="span4"><input type="text" name="alphanumeric3" id="alphanumeric3" class="span input"  maxlength="5" size="4" /></div>
+                                 </div>
+                            </div>
+                    </div>
+                    <div class="formRow">
+                            <label>Any characters:</label>
+                            <div class="formRight">
+                                 <div class="row-fluid">
+                                  <div class="span4"><input type="text" name="all1" id="all1" maxlength="5" class="span input"  size="4" /></div>
+                                  <div class="span4"><input type="text" name="all2" id="all2" maxlength="5" class="span input"  size="4" /></div>
+                                  <div class="span4"><input type="text" name="all3" id="all3" maxlength="5" class="span input"  size="4" /></div>
+                                 </div>
+                            </div>
+                    </div>
+                    <div class="formRow">
+                            <label>Regular Expression:</label>
+    
+    
+                            <div class="formRight">
+                               <input type="text" name="regex" id="regex" class="span input"  maxlength="15" size="13" />
+                            </div>
+                    </div>
+                    <div class="formRow">
+                        <label>Auto expanding:</label>
+                        <div class="formRight">
+                            <textarea  cols="50" rows="3"  class="span input same-height-1 resize-text">Here is some sample text just for view purpose.</textarea>
+                        </div>
+                	</div>
+
+
+    
+               <div class="clearfix"></div>
+               </div>    
+            </div>
+            <!--Additional input fields END-->
+            
+
+    
+            <div class="row-fluid">
+            <!--Style forms of validation  Start-->
+            <div class="grid span6">
+              <div class="grid-title">
+               <div class="pull-left">
+                  <div class="icon-title"><i class="icon-bookmark"></i></div>
+                  <span>Validation style</span> 
+                  <div class="clearfix"></div>
+               </div>
+               <div class="pull-right"> 
+               	  <div class="icon-title"><a href="#"><i class="icon-refresh"></i></a></div>
+                  <div class="icon-title"><a href="#"><i class="icon-cog"></i></a></div>
+               </div>
+              <div class="clearfix"></div>   
+              </div>
+              <div class="grid-content">
+                <div class="control-group warning">
+                    <label class="control-label" for="inputWarning">Input with warning</label>
+                    <div class="controls">
+                      <input type="text" id="inputWarning">
+                      <span class="help-inline">Something may have gone wrong</span>
+                    </div>
+                  </div>
+                  <div class="control-group error">
+                    <label class="control-label" for="inputError">Input with error</label>
+                    <div class="controls">
+                      <input type="text" id="inputError">
+                      <span class="help-inline">Please correct the error</span>
+                    </div>
+                  </div>
+                  <div class="control-group success">
+                    <label class="control-label" for="inputsuccess">Input with success</label>
+                    <div class="controls">
+                      <input type="text" id="inputsuccess">
+                      <span class="help-inline">Woohoo!</span>
+                    </div>
+                  </div>
+                  <div class="control-group success">
+                    <label class="control-label" for="selectError">Select with success</label>
+                    <div class="controls">
+                      <select id="selectError">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                      <span class="help-inline">Woohoo!</span>
+                    </div>
+                  </div>
+        
+              </div>    
+            </div>
+            <!--Style forms of validation  END-->
+            
+            <!--Form help text  Start-->
+            <div class="grid span6">
+              <div class="grid-title">
+               <div class="pull-left">
+                  <div class="icon-title"><i class="icon-bookmark"></i></div>
+                  <span>Form help text</span> 
+                  <div class="clearfix"></div>
+               </div>
+               <div class="pull-right"> 
+               	  <div class="icon-title"><a href="#"><i class="icon-refresh"></i></a></div>
+                  <div class="icon-title"><a href="#"><i class="icon-cog"></i></a></div>
+               </div>
+              <div class="clearfix"></div>   
+              </div>
+              <div class="grid-content">
+                 <div class="control-group">
+                    <label class="control-label" for="prependedInput">Prepended text</label>
+                    <div class="controls">
+                      <div class="input-append">
+                        <input class="span7" id="prependedInput" size="16" type="text"><span class="add-on">@</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label" for="appendedInput">Appended text</label>
+                    <div class="controls">
+                      <div class="input-append">
+                        <input class="span7" id="appendedInput" size="16" type="text"><span class="add-on">.00</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label" for="appendedPrependedInput">Append and prepend</label>
+                    <div class="controls">
+                      <div class="input-prepend input-append">
+                        <span class="add-on">$</span><input class="span7" id="appendedPrependedInput" size="16" type="text"><span class="add-on">.00</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label" for="appendedInputButton">Append with button</label>
+                    <div class="controls">
+                      <div class="input-append">
+                        <input class="span7" id="appendedInputButton" size="16" type="text"><button class="btn" type="button">Go!</button>
+                      </div>
+                    </div>
+                  </div>   
+        
+              </div>    
+            </div>
+            <!--Form help text  END-->
+            </div>
+            
+            <!--Checkbox and Radio  Start-->
+            <div class="grid">
+              <div class="grid-title">
+               <div class="pull-left">
+                  <div class="icon-title"><i class="icon-bookmark"></i></div>
+                  <span>Checkbox and Radio</span> 
+                  <div class="clearfix"></div>
+               </div>
+               <div class="pull-right"> 
+               	  <div class="icon-title"><a href="#"><i class="icon-refresh"></i></a></div>
+                  <div class="icon-title"><a href="#"><i class="icon-user"></i></a></div>
+                  <div class="icon-title"><a href="#"><i class="icon-cog"></i></a></div>
+               </div>
+              <div class="clearfix"></div>   
+              </div>
+              <div class="grid-content overflow">
+                      <div class="formRow">
+        
+                                <div class="distance distance-2">
+        
+                                 <p>
+                                   <input type="radio" id="r2" name="rr" checked="checked" />
+                                   <label for="r2"><span></span>Selected radio</label>
+                                 </p>
+        
+                                 <p>
+                                   <input type="radio" id="r1" name="rr" />
+                                   <label for="r1"><span></span> Normal state</label>
+                                 </p>
+                                 <p>
+                                   <input type="checkbox" id="c2" name="cc" checked="checked" />
+                                   <label for="c2"><span></span> Checked</label>
+                                 </p>
+                                 <p>
+                                   <input type="checkbox" id="c1" name="cc" />
+                                   <label for="c1"><span></span> Normal state</label>
+                                 </p>
+        
+        
+                                </div>
+        
+                         </div>
+                      
+        
+              </div>    
+            </div>
+            <!--Checkbox and Radio  END-->
+
+
+               
+               <!--BEGIN FOOTER-->
+               <div class="footer">
+                  <div class="left">Copyright &copy; 2013</div>
+                  <div class="right"><a href="#">Buy Template</a></div>
+                  <div class="clearfix"></div>
+               </div>
+               <!--BEGIN FOOTER END-->
+              
+          <div class="clearfix"></div> 
+          </div><!--end .block-->
+          
+        </div>
+        <!--MAIN CONTENT END-->
+    </div>
+    <!--/#wrapper-->
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+   
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/google-code-prettify/prettify.js"></script>
+   
+    <script src="js/jquery.flot.js"></script>
+    <script src="js/jquery.flot.pie.js"></script>
+    <script src="js/jquery.flot.orderBars.js"></script>
+    <script src="js/jquery.flot.resize.js"></script>
+    <script src="js/jquery.flot.categories.js"></script>
+    <script src="js/graphtable.js"></script>
+    <script src="js/fullcalendar.min.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/autoresize.jquery.min.js"></script>
+    <script src="js/jquery.autotab.js"></script>
+    <script src="js/jquery.jgrowl_minimized.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/jquery.stepy.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/raphael.2.1.0.min.js"></script>
+    <script src="js/justgage.1.0.1.min.js"></script>
+	<script src="js/glisse.js"></script>
+	<script src="js/styleswitcher.js"></script>
+	<script src="js/moderniz.js"></script>
+    <script src="js/jquery.sparkline.min.js"></script>
+    <script src="js/slidernav-min.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.4"></script>
+    
+	<script>
+    Modernizr.load([
+        {
+         load: [
+                'js/main.js'
+            ],
+            complete: function()
+            {
+                $.fn.ready(function()
+                {
+                    window.App.init();
+                });
+            }
+        }
+    ]);
+    </script>
+	<script src="js/application.js"></script>
+
+
+  </body>
+</html>
+

@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <title>Night Sky - User Interface</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="css/jquery-ui-1.8.16.custom.css" media="screen"  />
+    <link rel="stylesheet" href="css/fullcalendar.css" media="screen"  />
+    <link rel="stylesheet" href="css/chosen.css" media="screen"  />
+    <link rel="stylesheet" href="css/glisse.css?1.css">
+    <link rel="stylesheet" href="css/jquery.jgrowl.css">
+    <link rel="stylesheet" href="css/demo_table.css" >
+    <link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.4" media="screen" />
+    
+	<link rel="stylesheet" href="css/icon/font-awesome.css">    
+    <link rel="stylesheet" href="css/bootstrap-responsive.css">
+    
+    <link rel="alternate stylesheet" type="text/css" media="screen" title="green-theme" href="css/color/green.css" />
+	<link rel="alternate stylesheet" type="text/css" media="screen" title="red-theme" href="css/color/red.css" />
+	<link rel="alternate stylesheet" type="text/css" media="screen" title="blue-theme" href="css/color/blue.css" />
+    <link rel="alternate stylesheet" type="text/css" media="screen" title="orange-theme" href="css/color/orange.css" />
+    <link rel="alternate stylesheet" type="text/css" media="screen" title="purple-theme" href="css/color/purple.css" />
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+     <script language="JavaScript">
+	Firefox = navigator.userAgent.indexOf("Firefox") >= 0;
+	if(Firefox) document.write("<link rel='stylesheet' href='css/moz.css' type='text/css'>"); 
+	</script>
+    
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="favicon.ico">
+    
+  </head>
+
+  <body>
+    <!--BEGIN HEADER-->
+    <div id="header" role="banner">
+       <a id="menu-link" class="head-button-link menu-hide" href="#menu"><span>Menu</span></a>
+       <!--Logo--><a href="dashboard.html" class="logo"><h1>Night Sky</h1></a><!--Logo END-->
+       
+       <!--Search-->
+       <form class="search" action="#">
+         <input type="text" name="q" placeholder="Search...">
+       </form>
+       <!--Search END-->
+       
+       <div class="right">
+       
+       <!--message box-->
+         <div class="dropdown left">
+          
+          <a class="dropdown-toggle head-button-link" data-toggle="dropdown" href="#"><span class="notice-new">3</span></a> 
+          
+          <div class="dropdown-menu pull-right messages-list">
+          <div class="triangle"></div>
+          
+            <div class="notice-title">You Have 3 Massages</div>
+            <!--message #1-->
+            <div class="notice-message">
+            <a href="#" class="box">
+              <div class="avatar"><img src="images/avatar-2.png" alt=""></div>
+              <div class="info">
+                <div class="author">Csaba Gyulai</div>
+                <div class="date">Jan 9, 2013</div>
+                <div class="clearfix"></div>
+                <div class="text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit.</div>
+              </div>
+              <div class="clearfix"></div>
+            </a>
+            </div>
+            <!--message #2-->
+            <div class="notice-message">
+            <a href="#" class="box">
+              <div class="avatar"><img src="images/avatar-3.png" alt=""></div>
+              <div class="info">
+                <div class="author">Junkyard Sam</div>
+                <div class="date">Jan 15, 2013</div>
+                <div class="clearfix"></div>
+                <div class="text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit.</div>
+              </div>
+              <div class="clearfix"></div>
+            </a>
+            </div>
+            <!--message #3-->
+            <div class="notice-message">
+            <a href="#" class="box">
+              <div class="avatar"><img src="images/avatar-4.png" alt=""></div>
+              <div class="info">
+                <div class="author">Lienke Raben</div>
+                <div class="date">Nov 4, 2012</div>
+                <div class="clearfix"></div>
+                <div class="text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit.</div>
+              </div>
+              <div class="clearfix"></div>
+            </a>
+            </div>
+           
+            <a href="#" class="notice-more">View All Messages</a>
+          </div>
+        </div>
+       <!--message box end-->
+       
+       <!--notification box-->
+         <div class="dropdown left">
+          <a class="dropdown-toggle head-button-link notification" data-toggle="dropdown" href="#"><span class="notice-new">2</span></a>
+          
+          <div class="dropdown-menu pull-right messages-list">
+          <div class="triangle"></div>
+          
+            <div class="notice-title">You Have 2 Notifications</div>
+            <!--message #1-->
+            <div class="notice-message">
+            <a href="#" class="box">
+              <div class="avatar"><img src="images/avatar-5.png" alt=""></div>
+              <div class="info">
+                <div class="author">Jonas Anderson</div>
+                <div class="date">3 hours ago</div>
+                <div class="clearfix"></div>
+                <div class="text">Followed <span class="follow-link">Dennis Salvatier</span></div>
+              </div>
+              <div class="clearfix"></div>
+            </a>
+            </div>
+            <!--message #2-->
+            <div class="notice-message">
+            <a href="#" class="box">
+              <div class="avatar"><img src="images/avatar-6.png" alt=""></div>
+              <div class="info">
+                <div class="author">Ilias Sounas</div>
+                <div class="date">19 hours ago</div>
+                <div class="clearfix"></div>
+                <div class="text">Commented on <span class="comment-link">Angry Cloud</span></div>
+              </div>
+              <div class="clearfix"></div>
+            </a>
+            </div>
+            <!--message #3-->
+            <div class="notice-message">
+            <a href="#" class="box">
+              <div class="avatar"><img src="images/avatar-7.png" alt=""></div>
+              <div class="info">
+                <div class="author">Erin Hunting</div>
+                <div class="date">19 hours ago</div>
+                <div class="clearfix"></div>
+                <div class="text">Liked <span class="like-link">Overnight work</span></div>
+              </div>
+              <div class="clearfix"></div>
+            </a>
+            </div>
+           
+            <a href="#" class="notice-more">View All Notification</a>
+          </div>
+        </div>
+       <!--notification box end-->
+       
+       <!--config box-->
+         <div class="dropdown left">
+          <a class="dropdown-toggle head-button-link config" data-toggle="dropdown" href="#"></a>
+          <div class="dropdown-menu pull-right settings-box">
+          <div class="triangle-2"></div>
+          
+            <a href="javascript:chooseStyle('none', 30)" class="settings-link"></a>
+            <a href="javascript:chooseStyle('blue-theme', 30)" class="settings-link blue"></a>
+            <a href="javascript:chooseStyle('green-theme', 30)" class="settings-link green"></a>
+            <a href="javascript:chooseStyle('purple-theme', 30)" class="settings-link purple"></a>
+            <a href="javascript:chooseStyle('orange-theme', 30)" class="settings-link yellow"></a>
+            <a href="javascript:chooseStyle('red-theme', 30)" class="settings-link red"></a>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+       <!--config box end-->
+       
+       <!--profile box-->
+         <div class="dropdown left profile">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <span class="double-spacer"></span>
+            <div class="profile-avatar"><img src="images/avatar.png" alt=""></div>
+            <div class="profile-username"><span>Welcome,</span> John Doe!</div>
+            <div class="profile-caret"> <span class="caret"></span></div>
+            <span class="double-spacer"></span>
+          </a>
+          <div class="dropdown-menu pull-right profile-box">
+          <div class="triangle-3"></div>
+          
+            <ul class="profile-navigation">
+              <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
+              <li><a href="#"><i class="icon-cog"></i> Settings</a></li>
+              <li><a href="#"><i class="icon-info-sign"></i> Help</a></li>
+              <li><a href="index.html"><i class="icon-off"></i> Logout</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+       <!--profile box end-->
+       
+       </div>
+       
+      
+    </div>
+    <!--END HEADER-->
+    
+    <div id="wrap">
+    
+    
+    	<!--BEGIN SIDEBAR-->
+        <div id="menu" role="navigation">
+        
+          <ul class="main-menu">
+             <li><a href="dashboard.html"><i class="general"></i> General</a></li>
+             <li class="active"><a href="ui.html"><i class="components"></i> UI</a></li>
+             <li><a href="forms.html"><i class="forms"></i> Forms</a></li>
+             <li><a href="charts.html"><i class="statistics"></i> Statistics</a></li>
+             <li><a href="typo.html"><i class="pages"></i> Pages</a></li>
+             <li><a href="tables.html"><i class="tables"></i> Tables</a></li>
+             <li><a href="contacts.html"><i class="bonus"></i> Bonus</a></li>
+          </ul>
+          
+          <ul class="additional-menu">
+             <li class="active"><a href="ui.html"><i class="icon-random"></i> UI</a></li>
+             <li><a href="widgets.html"><i class="icon-eye-close"></i> Widgets</a></li>
+             <li><a href="buttons.html"><i class="icon-tint"></i> Buttons</a></li>
+             <li><a href="icons.html"><i class="icon-star"></i> Icons</a></li>
+          </ul>
+          
+          <!--New Files-->
+          <div class="new-files">
+             <div class="title">New Files</div>
+             
+             <div class="files">
+               <div class="file">
+                  <div class="file-format"><img src="images/icon/file_pdf.png" alt=""></div>
+                  <div class="file-info">
+                    <div class="file-name">Mani_CV.pdf <a href="#"><i class="icon-remove"></i></a></div>
+                    <div class="file-date">January 30, 2013</div>
+                  </div>
+                </div>
+                <div class="file">
+                  <div class="file-format"><img src="images/icon/file_doc.png" alt=""></div>
+                  <div class="file-info">
+                    <div class="file-name">Mani_CV.doc <a href="#"><i class="icon-remove"></i></a></div>
+                    <div class="file-date">January 30, 2013</div>
+                  </div>
+                </div>
+                <div class="file">
+                  <div class="file-format"><img src="images/icon/file_jpg.png" alt=""></div>
+                  <div class="file-info">
+                    <div class="file-name">Mani_CV.jpg <a href="#"><i class="icon-remove"></i></a></div>
+                    <div class="file-date">January 30, 2013</div>
+                  </div>
+                </div>
+                <div class="file">
+                  <div class="file-format"><img src="images/icon/file_xls.png" alt=""></div>
+                  <div class="file-info">
+                    <div class="file-name">Mani_CV.xls <a href="#"><i class="icon-remove"></i></a></div>
+                    <div class="file-date">January 30, 2013</div>
+                  </div>
+                </div>
+                <div class="file">
+                  <div class="file-format"><img src="images/icon/file_zip.png" alt=""></div>
+                  <div class="file-info">
+                    <div class="file-name">Mani_CV.zip <a href="#"><i class="icon-remove"></i></a></div>
+                    <div class="file-date">January 30, 2013</div>
+                  </div>
+                </div>
+                <div class="file">
+                  <div class="file-format"><img src="images/icon/file_txt.png" alt=""></div>
+                  <div class="file-info">
+                    <div class="file-name">Mani_CV.txt <a href="#"><i class="icon-remove"></i></a></div>
+                    <div class="file-date">January 30, 2013</div>
+                  </div>
+                </div>
+               
+             </div>
+          </div>
+          <!--New Files END-->
+          
+          <!--Upload Box-->
+          <div class="upload-box">Drop files <br> here to upload</div>
+          <!--Upload Box END-->
+          
+          <!--Media Files-->
+          <div class="media-files">
+             <div class="title">Media Files</div>
+             <p>This is Photoshop's version  of Lorem Ipsum.</p>
+             
+             <div class="media-files-info-box">
+                <i class="icon-picture"></i> Photo <strong>35%</strong>
+                <div class="process-progress"> <div class="advance red" style="width:35%"></div> </div> 
+             </div>
+             <div class="media-files-info-box">
+                <i class="icon-facetime-video"></i> Video <strong>43%</strong>
+                <div class="process-progress"> <div class="advance blue" style="width:43%"></div> </div> 
+             </div>
+             <div class="media-files-info-box">
+                <i class="icon-music"></i> Audio <strong>23%</strong>
+                <div class="process-progress"> <div class="advance green" style="width:23%"></div> </div>
+             </div>
+          </div>
+          <!--Media Files END-->
+          
+          <!--Add New Widget-->
+          <a href="#" class="add-widget-link">Add New Widget</a>
+          <!--Add New Widget END-->
+          
+          <div class="clearfix"></div>
+          
+          
+        </div>
+        <!--SIDEBAR END-->
+    
+    	
+        <!--BEGIN MAIN CONTENT-->
+        <div id="main" role="main">
+          <div class="block">
+   		  <div class="clearfix"></div>
+            
+             <!--page title-->
+             <div class="pagetitle">
+                <h1>UI.</h1> 
+                <div class="btn-group">
+                  <button class="btn">Day</button>
+                  <button class="btn">Week</button>
+                  <button class="btn">Month</button>
+                </div>
+                <div class="clearfix"></div>
+             </div>
+             <!--page title end-->
+             
+             
+              
+              <!--Sliders Start-->
+                <div class="grid">
+                  <div class="grid-title">
+                   <div class="pull-left">
+                      <div class="icon-title"><i class="icon-reorder"></i></div>
+                      <span>Sliders</span> 
+                      <div class="clearfix"></div>
+                   </div>
+                   <div class="pull-right"> 
+                      <div class="icon-title"><a href="#"><i class="icon-refresh"></i></a></div>
+                      <div class="icon-title"><a href="#"><i class="icon-cog"></i></a></div>
+                   </div>
+                  <div class="clearfix"></div>   
+                  </div>
+                  <div class="grid-content">
+                            <div class="formRow">
+                                    <label>Usual slider:</label>
+                                    <div class="formRight">
+                                        <div id="slider"></div> 
+                                    </div>
+                             </div>
+                             <div class="formRow">
+                                    <label>Slider with increments:</label>
+                                    <div class="formRight">
+                                        $50 increments: <input type="text" id="amount" class="ui_input" />
+                                        <div id="slider2"></div>
+                                    </div>
+                             </div>
+                             <div class="formRow">
+                                    <label>Price range:</label>
+                                    <div class="formRight">
+                                          Price range: <input type="text" id="amount2"  />
+                                         <div id="slider-range"></div>
+                                    </div>
+                             </div>
+                             <div class="formRow">
+                                    <label>With fixed minimum:</label>
+                                    <div class="formRight">
+                                          Minimum: <input type="text" id="amount3" />
+                                          <div id="slider-range-min"></div>
+                                    </div>
+                             </div>
+                             <div class="formRow">
+                                    <label>With fixed maximum:</label>
+                                    <div class="formRight">
+                                          Maximum: <input type="text" id="amount4" />
+                                          <div id="slider-range-max"></div>
+                                    </div>
+                             </div>
+                             <div class="formRow">
+                                    <label>Vertical multiple sliders:</label>
+                                    <div class="formRight">
+                                         <div id="eq" class="slider-red">
+                                                <span>66</span>
+                                                <span>66</span>
+                                         </div>
+                                         <div id="eq" class="slider-green">
+                                                <span>66</span>
+                                                <span>66</span>
+                                         </div>
+                                         <div id="eq" class="slider-orange">
+                                                <span>66</span>
+                                                <span>66</span>
+                                         </div>
+                                         <div id="eq">
+                                                <span>66</span>
+                                                <span>66</span>
+                                         </div>       
+                                    </div>
+                             </div>
+                            
+                             <div class="formRow">
+                                    <label>Red:</label>
+                                    <div class="formRight">
+                                         <div class="slider-red demo_slider"></div>
+                                    </div>
+                             </div>
+                             <div class="formRow">
+                                    <label>Orange:</label>
+                                    <div class="formRight">
+                                         <div  class="slider-orange demo_slider"></div>
+                                    </div>
+                             </div>
+                             <div class="formRow">
+                                    <label>Blue:</label>
+                                    <div class="formRight">
+                                         <div class="demo_slider"></div>
+                                    </div>
+                             </div>
+                             <div class="formRow">
+                                    <label>Green:</label>
+                                    <div class="formRight">
+                                         <div class="slider-green demo_slider"></div>
+                                    </div>
+                             </div>
+                             
+                    <div class="clearfix"></div>
+                  </div>    
+                </div>
+                <!--Sliders END-->
+                
+                <!--Collapsible Group Start-->
+                <div class="grid-transparent">
+                 <div class="accordion" id="accordion2">
+                        <div class="accordion-group">
+                          <div class="accordion-titleing">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                              Accordion, opened by default
+                            </a>
+                          </div>
+                          <div id="collapseOne" class="accordion-body collapse in">
+                            <div class="accordion-inner">
+                              This is opened by default
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-group">
+                          <div class="accordion-titleing">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                             Accordion, closed
+                            </a>
+                          </div>
+                          <div id="collapseTwo" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                              This is closed by default
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-group">
+                          <div class="accordion-titleing">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                              Accordion, closed
+                            </a>
+                          </div>
+                          <div id="collapseThree" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                              This is closed by default
+                            </div>
+                          </div>
+                        </div>
+                       </div>   
+                </div>
+                <!--Collapsible Group END-->
+                
+                <div class="row-fluid">
+                <!--Tabs Nav Left Start-->
+                <div class="grid span6">
+                  <div class="grid-title"> 
+                  </div>                    
+                   <ul id="myTab" class="tabs-nav">
+                      <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+                      <li><a href="#profile" data-toggle="tab">Profile</a></li>
+                      <li><a href="#help" data-toggle="tab">Help</a></li>
+                    </ul>
+                    <div class="clearfix"></div> 
+                  <div class="grid-content">
+                   <div id="myTabContent" class="tab-content">
+                      <div class="tab-pane fade active in" id="home">
+                        <p>Tab 1 Content</p>
+                      </div>
+                      <div class="tab-pane fade" id="profile">
+                        <p>Tab 2 Content.</p>
+                      </div>
+                      <div class="tab-pane fade" id="help">
+                        <p>Tab 3 Content.</p>
+                      </div>
+                    </div>
+                  </div>
+                 </div>
+                 <!--Tabs Nav Left END-->
+                 
+                 <!--Tabs Nav Right Start-->
+                 <div class="grid span6">
+                  <div class="grid-title"> 
+                  </div>                    
+                   <ul id="myTab" class="tabs-nav tabs-nav-right">
+                      <li class="active"><a href="#home2" data-toggle="tab">Home</a></li>
+                      <li><a href="#profile2" data-toggle="tab">Profile</a></li>
+                      <li><a href="#help2" data-toggle="tab">Help</a></li>
+                    </ul>
+                    <div class="clearfix"></div> 
+                  <div class="grid-content">
+                   <div id="myTabContent" class="tab-content">
+                      <div class="tab-pane fade active in" id="home2">
+                        <p>Tab 1 Content</p>
+                      </div>
+                      <div class="tab-pane fade" id="profile2">
+                        <p>Tab 2 Content.</p>
+                      </div>
+                      <div class="tab-pane fade" id="help2">
+                        <p>Tab 3 Content.</p>
+                      </div>
+                    </div>
+                  </div>
+                 </div>
+                 <!--Tabs Nav Right END-->
+                </div>
+                
+                <!--Alerts Start-->
+                <div class="grid">
+                  <div class="grid-title">
+                   <div class="pull-left">
+                      <div class="icon-title"><i class="icon-info-sign"></i></div>
+                      <span>Alerts</span> 
+                      <div class="clearfix"></div>
+                   </div>
+                   <div class="pull-right"> 
+                      <div class="icon-title"><a href="#"><i class="icon-refresh"></i></a></div>
+                      <div class="icon-title"><a href="#"><i class="icon-cog"></i></a></div>
+                   </div>
+                  <div class="clearfix"></div>   
+                  </div>
+                  <div class="grid-content">
+                             <div class="formRow">
+                                    <label class="label-orange">Notice:</label>
+                                    <div class="formRight">
+                                          <div class="alert">
+                                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                            <strong>Warning!</strong> Best check yo self, you're not looking too good.
+                                          </div>
+                                    </div>
+                             </div>
+                             <div class="formRow">
+                                    <label class="label-red">Error:</label>
+                                    <div class="formRight">
+                                          <div class="alert alert-error">
+                                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                            <strong>Oh snap!</strong> Change a few things up and try submitting again.
+                                          </div>  
+                                    </div>
+                             </div>
+                             <div class="formRow">
+                                    <label class="label-green">Success:</label>
+                                    <div class="formRight">
+                                          <div class="alert alert-success">
+                                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                            <strong>Well done!</strong> You successfully read this important alert message.
+                                          </div>
+                                    </div>
+                             </div>
+                             <div class="formRow">
+                                    <label class="label-blue">Information:</label>
+                                    <div class="formRight">
+                                          <div class="alert alert-info">
+                                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                            <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+                                          </div>
+                                    </div>
+                             </div>
+                    <div class="clearfix"></div>
+                  </div>    
+                </div>
+                <!--Alerts END-->
+                
+                <!--Progress Bars Start-->
+                <div class="grid">
+                  <div class="grid-title">
+                   <div class="pull-left">
+                      <div class="icon-title"><i class="icon-eye-close"></i></div>
+                      <span>Progress Bars</span> 
+                      <div class="clearfix"></div>
+                   </div>
+                   <div class="pull-right"> 
+                      <div class="icon-title"><a href="#"><i class="icon-refresh"></i></a></div>
+                      <div class="icon-title"><a href="#"><i class="icon-cog"></i></a></div>
+                   </div>
+                  <div class="clearfix"></div>   
+                  </div>
+                  <div class="grid-content">
+                             <div class="formRow">
+                                    <label>Basic:</label>
+                                    <div class="formRight">
+                                        <div class="progress progress-info">
+                                          <div class="bar" style="width: 20%"></div>
+                                        </div>
+                                        <div class="progress progress-success">
+                                          <div class="bar" style="width: 20%"></div>
+                                        </div>
+                                        <div class="progress progress-warning">
+                                          <div class="bar" style="width: 20%"></div>
+                                        </div>
+                                        <div class="progress progress-danger">
+                                          <div class="bar" style="width: 20%"></div>
+                                        </div>
+                                    </div>
+                             </div>
+                             <div class="formRow">
+                                    <label>Striped:</label>
+                                    <div class="formRight">
+                                        <div class="progress progress-striped">
+                                          <div class="bar" style="width: 20%"></div>
+                                        </div>
+                                        <div class="progress progress-success progress-striped">
+                                          <div class="bar" style="width: 20%"></div>
+                                        </div>
+                                        <div class="progress progress-warning progress-striped">
+                                          <div class="bar" style="width: 20%"></div>
+                                        </div>
+                                        <div class="progress progress-danger progress-striped">
+                                          <div class="bar" style="width: 20%"></div>
+                                        </div>
+
+                                    </div>
+                             </div>
+                             <div class="formRow">
+                                    <label>Animated:</label>
+                                    <div class="formRight">
+                                        <div class="progress progress-striped active">
+                                          <div class="bar" style="width: 20%"></div>
+                                        </div>
+                                        <div class="progress progress-success progress-striped  active">
+                                          <div class="bar" style="width: 40%"></div>
+                                        </div>
+                                        <div class="progress progress-warning progress-striped  active">
+                                          <div class="bar" style="width: 60%"></div>
+                                        </div>
+                                        <div class="progress progress-danger progress-striped  active">
+                                          <div class="bar" style="width: 80%"></div>
+                                        </div>
+
+                                    </div>
+                             </div>
+                             
+                    <div class="clearfix"></div>
+                  </div>    
+                </div>
+                <!--Progress Bars END-->
+                
+                <div class="row-fluid">
+                <!--Popovers Start-->
+                <div class="grid span6">
+                  <div class="grid-title">
+                   <div class="pull-left">
+                      <div class="icon-title"><i class="icon-tint"></i></div>
+                      <span>Popovers</span> 
+                      <div class="clearfix"></div>
+                   </div>
+                   <div class="pull-right"> 
+                      <div class="icon-title"><a href="#"><i class="icon-refresh"></i></a></div>
+                      <div class="icon-title"><a href="#"><i class="icon-cog"></i></a></div>
+                   </div>
+                  <div class="clearfix"></div>   
+                  </div>
+                  <div class="grid-content">
+                        <div class="row-fluid show-grid">
+                                                            <div class="span4"></div>
+                                                            <div class="span4"><a class="popover-top"  title="A Title" data-content="And here's some amazing content. It's very engaging. right?">Top</a></div>
+                                                            <div class="span4"></div>
+                                                        </div>
+                                                        <div class="row-fluid show-grid">
+                                                            <div class="span4"><a class="popover-left"  title="A Title" data-content="And here's some amazing content. It's very engaging. right?">Left</a></div>
+                                                            <div class="span4"></div>
+                                                            <div class="span4"><a class="popover-right"  title="A Title" data-content="And here's some amazing content. It's very engaging. right?">Right</a></div>
+                                                        </div>
+                                                        <div class="row-fluid show-grid">
+                                                            <div class="span4"></div>
+                                                            <div class="span4"><a class="popover-bottom"  title="A Title" data-content="And here's some amazing content. It's very engaging. right?">Bottom</a></div>
+                                                            <div class="span4"></div>
+                                                        </div>
+            
+                    <div class="clearfix"></div>
+                  </div>    
+                </div>
+                <!--Popovers END-->
+                
+                <!--Tooltips Start-->
+                  <div class="grid span6">
+                   <div class="grid-title">
+                   <div class="pull-left">
+                      <div class="icon-title"><i class="icon-magnet"></i></div>
+                      <span>Tooltips</span> 
+                      <div class="clearfix"></div>
+                   </div>
+                   <div class="pull-right"> 
+                      <div class="icon-title"><a href="#"><i class="icon-refresh"></i></a></div>
+                      <div class="icon-title"><a href="#"><i class="icon-cog"></i></a></div>
+                   </div>
+                  <div class="clearfix"></div>   
+                  </div>
+                   <div class="grid-content">
+                                                        <div class="row-fluid show-grid">
+                                                            <div class="span4"></div>
+                                                            <div class="span4 tooltip-top"><a href="#" data-t="tooltip" title="Text">Top</a></div>
+                                                            <div class="span4"></div>
+                                                        </div>
+                                                        <div class="row-fluid show-grid">
+                                                            <div class="span4 tooltip-left"><a href="#" data-t="tooltip" title="Text">Left</a></div>
+                                                            <div class="span4"></div>
+                                                            <div class="span4 tooltip-right"><a href="#" data-t="tooltip" title="Text">Right</a></div>
+                                                        </div>
+                                                        <div class="row-fluid show-grid">
+                                                            <div class="span4"></div>
+                                                            <div class="span4 tooltip-bottom"><a href="#" data-t="tooltip" title="Text">Bottom</a></div>
+                                                            <div class="span4"></div>
+                                                        </div>
+            
+                    <div class="clearfix"></div>
+                    </div>    
+                   </div>
+            
+                <!--Tooltips END-->
+                </div>
+                
+                <div class="row-fluid">
+                <!--Pagination Start-->
+                <div class="grid span6">
+                  <div class="grid-title">
+                   <div class="pull-left">
+                      <div class="icon-title"><i class="icon-flag"></i></div>
+                      <span>Pagination</span> 
+                      <div class="clearfix"></div>
+                   </div>
+                   <div class="pull-right"> 
+                      <div class="icon-title"><a href="#"><i class="icon-refresh"></i></a></div>
+                      <div class="icon-title"><a href="#"><i class="icon-cog"></i></a></div>
+                   </div>
+                  <div class="clearfix"></div>
+                  </div>
+                  <div class="grid-content">
+                        <div class="pagination-desc">Pagination  Left:</div>
+                        <div class="pagination">
+                        <ul>
+                          <li class="disabled"><a href="#">&laquo;</a></li>
+                          <li class="active"><a href="#">1</a></li>
+                          <li><a href="#">2</a></li>
+                          <li><a href="#">3</a></li>
+                          <li><a href="#">4</a></li>
+                          <li><a href="#">&raquo;</a></li>
+                        </ul>
+                      </div>
+                      <div class="pagination-desc">Pagination  Center:</div>
+                      <div class="pagination pagination-centered">
+                        <ul>
+                          <li><a href="#">&laquo;</a></li>
+                          <li><a href="#">10</a></li>
+                          <li class="active"><a href="#">11</a></li>
+                          <li><a href="#">12</a></li>
+                          <li><a href="#">&raquo;</a></li>
+                        </ul>
+                      </div>
+                      <div class="pagination-desc">Pagination  Right:</div>
+                      <div class="pagination pagination-right">
+                        <ul>
+                          <li><a href="#">&laquo;</a></li>
+                          <li class="active"><a href="#">10</a></li>
+                          <li class="disabled"><a href="#">...</a></li>
+                          <li><a href="#">20</a></li>
+                          <li><a href="#">&raquo;</a></li>
+                        </ul>
+                      </div>
+                    <div class="clear"></div>
+                  </div>    
+                </div>
+                <!--Pagination END-->
+                
+                <!--Pager Start-->
+                <div class="span6">
+                
+                  <div class="grid">
+                   <div class="grid-title">
+                   <div class="pull-left">
+                      <div class="icon-title"><i class="icon-map-marker"></i></div>
+                      <span>Pager On</span> 
+                      <div class="clearfix"></div>
+                   </div>
+                   <div class="pull-right"> 
+                      <div class="icon-title"><a href="#"><i class="icon-refresh"></i></a></div>
+                      <div class="icon-title"><a href="#"><i class="icon-cog"></i></a></div>
+                   </div>
+                  <div class="clearfix"></div>
+                  </div>
+                   <div class="grid-content">
+                        <ul class="pager">
+                            <li class="previous"><a href="#">← Older</a></li>
+                            <li class="next"><a href="#">Newer →</a></li>
+                        </ul>
+                    <div class="clear"></div>
+                    </div>    
+                   </div>
+                   
+                   <div class="grid">
+                   <div class="grid-title">
+                   <div class="pull-left">
+                      <div class="icon-title"><i class="icon-map-marker"></i></div>
+                      <span>Pager Off</span> 
+                      <div class="clearfix"></div>
+                   </div>
+                   <div class="pull-right"> 
+                      <div class="icon-title"><a href="#"><i class="icon-refresh"></i></a></div>
+                      <div class="icon-title"><a href="#"><i class="icon-cog"></i></a></div>
+                   </div>
+                  <div class="clearfix"></div>
+                  </div>
+                   <div class="grid-content">
+                        <ul class="pager">
+                            <li class="previous disabled"><a href="#">← Older</a></li>
+                            <li class="next disabled"><a href="#">Newer →</a></li>
+                        </ul>
+                    <div class="clear"></div>
+                    </div>    
+                   </div>
+                
+                
+                </div>
+                <!--Pager END-->
+                </div>
+
+      
+               <!--BEGIN FOOTER-->
+               <div class="footer">
+                  <div class="left">Copyright &copy; 2013</div>
+                  <div class="right"><a href="#">Buy Template</a></div>
+                  <div class="clearfix"></div>
+               </div>
+               <!--BEGIN FOOTER END-->
+              
+          <div class="clearfix"></div> 
+          </div><!--end .block-->
+        </div>
+        <!--MAIN CONTENT END-->
+    
+    </div>
+    <!--/#wrapper-->
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+   
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/google-code-prettify/prettify.js"></script>
+   
+    <script src="js/jquery.flot.js"></script>
+    <script src="js/jquery.flot.pie.js"></script>
+    <script src="js/jquery.flot.orderBars.js"></script>
+    <script src="js/jquery.flot.resize.js"></script>
+    <script src="js/jquery.flot.categories.js"></script>
+    <script src="js/graphtable.js"></script>
+    <script src="js/fullcalendar.min.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/autoresize.jquery.min.js"></script>
+    <script src="js/jquery.autotab.js"></script>
+    <script src="js/jquery.jgrowl_minimized.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/jquery.stepy.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/raphael.2.1.0.min.js"></script>
+    <script src="js/justgage.1.0.1.min.js"></script>
+	<script src="js/glisse.js"></script>
+	<script src="js/styleswitcher.js"></script>
+	<script src="js/moderniz.js"></script>
+    <script src="js/jquery.sparkline.min.js"></script>
+    <script src="js/slidernav-min.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.4"></script>
+    
+	<script>
+    Modernizr.load([
+        {
+         load: [
+                'js/main.js'
+            ],
+            complete: function()
+            {
+                $.fn.ready(function()
+                {
+                    window.App.init();
+                });
+            }
+        }
+    ]);
+    </script>
+	<script src="js/application.js"></script>
+
+
+  </body>
+</html>
+
