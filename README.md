@@ -13,7 +13,7 @@ Users:
 - Roadie makes every citizen Help The Government
 
 Admin:
-- One page compliant tracking system.
+- One page complaint tracking system.
 - No more delegating works and tracking whether the other person completing the works or not.
 - Prioritisation of solving issues based on the intensity of the problem.
 
