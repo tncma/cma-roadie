@@ -2,7 +2,23 @@ cma-roadie
 ==========
 Team Name : Team Roadie
 
-Abstract : Road damage, Sewage leakage, Street light - complaint and management system
+Abstract :
+
+"ROADIE" 
+
+Mission:
+Users:
+- One "Tap" Complaint logging system for all the Municipal Problems
+- Where ever a person sees a problem they will be able to help others.
+- Roadie makes every citizen Help The Government
+
+Admin:
+- One page compliant tracking system.
+- No more delegating works and tracking whether the other person completing the works or not.
+- Prioritisation of solving issues based on the intensity of the problem.
+
+Vision:
+- Integrate Man, Machine & Technology to serve THE GOVERMENT.
 
 Team Details : 
       Venkateswaraan Loganathan, 
