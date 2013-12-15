@@ -15,10 +15,12 @@
 	  line-height: 18px;
 	  color:#353535;
 	}
-	
+	.logoroadie{
+		padding-left:30px;
+	}
 /** The wrapper that will contain our two forms **/
 	#wrapper{
-		top:200px;
+		top:100px;
 		right: 0px;
 		margin: 0px auto;	
 		width: 378px;

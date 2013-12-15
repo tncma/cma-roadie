@@ -40,6 +40,21 @@
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="favicon.ico">
     
+    <style>
+		#Very-severe{
+			color:#F80000;
+		}
+		#Severe{
+			color:#FFA93C;
+		}
+		#Ordinary{
+			color:#000099;
+		}
+		#No-Image{
+			text-decoration:none;
+			color:#000;
+		}
+	</style>
   </head>
 
   <body>
@@ -178,6 +193,7 @@
             <div class="clearfix"></div>
           </div>
         </div>
+
        <!--config box end-->
        
        <!--profile box-->
@@ -208,30 +224,7 @@
       
     </div>
     <!--END HEADER-->
-    <script>
-		function retreiveRoadList(){
-		var xhr = new XMLHttpRequest();
-
-		xhr.onreadystatechange = function() {
-   		 if (xhr.readyState == 4) {
-			 var text = xhr.responseText;
-			 text = JSON.parse(text);
-			 text = text.result;
-			 for(index in text){
-				 var status = 'ordinary';
-				 if(text[index].count > 3) status = 'sever'
-        	$('body').find('#road-table-row').append('<tr class="even"><td class="t_center  sorting_1"><input type="checkbox" name="cc" id="c6"><label for="c6"><span></span></label></td><td class=" ">looper</td><td class="hidden-mobile "><a href="#">'+text[index].emailid+'</a></td><td class="hidden-mobile ">'+text[index].street+'</td><td class="hidden-mobile ">12.02.2011</td><td class="hidden-mobile "><span class="'+status+'"></span></td><td class="action-table "><a href="#"><img alt="" src="images/icon/table_view.png"></a> <a href="#"><img alt="" src="images/icon/table_edit.png"></a> <a href="#"><img alt="" src="images/icon/table_del.png"></a></td></tr>');
-			 }
-		 
-			
-    	}
-	}
-
-		xhr.open('GET', 'http://10.11.96.251:3001/list/road', true);
-		//xhr.setRequestHeader('Access-Control-Allow-Origin','*');
-		xhr.send(null);
-		}
-	</script>
+   
     <div id="wrap">
     
     
@@ -239,8 +232,8 @@
         <div id="menu" role="navigation">
         
           <ul class="main-menu">
-             <li class="active"><a href="dashboard.html"><i class="general"></i> General</a></li>
-             <li><a  onclick="retreiveRoadList()"><i class="components"></i> Roads</a></li>
+             <li ><a href="dashboard.html"><i class="general"></i> General</a></li>
+             <li class="active"><a href="road-tables.html"><i class="components"></i> Roads</a></li>
              <li><a href="light-tables.html"><i class="forms"></i> Light</a></li>
              <li><a href="sewage-tables.html"><i class="statistics"></i> Sewage</a></li>
           </ul>
@@ -260,9 +253,9 @@
              <div class="pagetitle">
                 <h1>Road complaints</h1> 
                 <div class="btn-group">
-                  <button class="s_green">Fixed</button>
-                  <button class="s_orange">Not Fixed</button>
-                  <button class="s_gray">Suspended</button>
+                  <button onClick="filterFunctionFixed()" class="s_green">Fixed</button>
+                  <button onClick="filterFunctionNotFixed()" class="s_orange">Not Fixed</button>
+                  <button onClick="filterFunctionSuspended()" class="s_gray">Suspended</button>
                 </div>
                 <div class="clearfix"></div>
              </div>
@@ -276,7 +269,7 @@
               <div class="grid-title">
                <div class="pull-left">
                   <div class="icon-title"><i class="icon-eye-open"></i></div>
-                  <span>Example Table</span> 
+                  <span>Complaints list</span> 
                   <div class="clearfix"></div>
                </div>
                <div class="pull-right"> 
@@ -288,26 +281,143 @@
             
               <div class="grid-content overflow">
                 
-            <table class="table table-bordered table-mod-2" id="datatable_3">
-            <thead>
-              <tr>
-                <th class="t_center"><input type="checkbox" id="c1" name="cc" /><label for="c1"><span></span></label></th>
-                <th>Username</th>
-                <th class="hidden-mobile">Email</th>
-                <th class="hidden-mobile">Street name</th>
-                <th class="hidden-mobile">Date</th>
-                <th class="hidden-mobile">Status</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody id="road-table-row">
-              
-            </tbody>
-          </table>  
+                    <table class="table table-bordered table-mod-2" id="datatable_3">
+                        <thead>
+                          <tr>
+                            <th class="hidden-mobile">Phone No.</th>
+                            <th class="hidden-mobile">Email</th>
+                            <th class="hidden-mobile">Street name</th>
+                            <th class="hidden-mobile">Date</th>
+                            <th class="hidden-mobile">Image</th>
+                            <th class="hidden-mobile" >Status</th>
+                            <th style="visibility:{collapse}">Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody id="road-table-row">
+                           <script>
+								
+								var collapse = 'visible';
+								function retreiveRoadList(status){
+									
+									var xhr = new XMLHttpRequest();
+									
+									xhr.onreadystatechange = function() {
+										 if (xhr.readyState == 4) {
+											 var text = xhr.responseText;
+											 text = JSON.parse(text);
+											 text = text.result;
+											 for(index in text){
+												 var status = 'Ordinary';
+												 if(text[index].count > 7) status = 'Very-severe' 
+												 else if(text[index].count > 3) status = 'Severe';
+												 var classOddEven = 'odd';
+												 if(index.length%2 == 0)   classOddEven = 'even' 
+												 else classOddEven = 'odd';
+												 var imgStat = 'No-Image'
+												 if(text[index].img == 1) imgStat = 'Click here';
+  											     
+												 if (text[index].status == 2) collapse = 'collapse'
+													else if (text[index].status == 3) collapse = 'collapse'
+											 $('body').find('#road-table-row').append('<tr class="'+classOddEven+'"><td class="hidden-mobile">'+text[index].phone+'</td><td class="hidden-mobile">'+text[index].emailid+'</td><td class="hidden-mobile">'+text[index].street+'</td><td class="hidden-mobile">'+text[index].created+'</td><td><a class="thumbnail fancybox" data-fancybox-group="gallery" href="">										<span class="action-table" onClick="reqListener('+text[index].content+')" id="'+imgStat+'">'+imgStat+'</span><span class="baseData"></span></a></td><td class="action-table" id="'+status+'">'+status+'</td><td style="visibility:'+collapse+'"> <button id="fixedButton" onClick="fixedStatus('+text[index].id+')" class="s_green">Fixed</button><button onClick="suspendedStatus('+text[index].id+')" class="s_gray">Suspended</button></td></tr>');
+											 }	
+										}
+									}	
+									xhr.open('GET', 'http://107.22.214.135:3001/list/road/'+status+'', true);
+									
+									xhr.send(null);									
+								}								
+		 
+                                           
+								function clickImg(id){
+									var xhr = new XMLHttpRequest();
+									xhr.onreadystatechange = function() {
+										 if (xhr.readyState == 4) {
+											
+											var text = xhr.responseText;
+											text = JSON.parse(text);
+													 text = text.result;
+													  for(index in text){
+														  
+														   alert((text[index].content));
+														   
+															
+													  }
+										 }
+									}
+											
+									//xhr.open('GET', 'http://107.22.214.135:3001/image/'+id+'', true);
+									//xhr.send(null);
+																			
+								}
+								function reqListener (id) {
+									var oRequest = new XMLHttpRequest();
+									var sURL = "http://107.22.214.135:3001/download/"+id
+									oRequest.open("GET",sURL,false);
+									oRequest.send(null);
+									console.log(oRequest.responseText);
+									//$('lightboxImg').attr('src','data:image/gif;base64,'+oRequest.responseText);
+									setTimeout(function(){
+										$('.fancybox-inner').html('<img id="lightboxImg" src="data:image/gif;base64,'+oRequest.responseText+'"/>');	
+										$('.fancybox-placeholder').html('<a href="" data-fancybox-group="gallery" class="thumbnail fancybox">										<span id="Click here" onclick="reqListener('+id+')" class="action-table">Click here</span><span class="baseData"></span></a>');
+										$('.fancybox-placeholder').attr('style','display:block');
+									},100);
+									
+								}
+							
+								window.onload = function()
+								{
+								   retreiveRoadList(1);
+								};
+								
+								function filterFunctionFixed(){
+									clearTable();
+									retreiveRoadList(3);
+								}
+								function filterFunctionNotFixed(){
+									clearTable();
+									retreiveRoadList(1);
 
+								}
+								function filterFunctionSuspended(){
+									clearTable();
+									retreiveRoadList(2);
+								}
+								
+								function clearTable()
+								{
+								 var tableRef = document.getElementById('road-table-row');
+								 while ( tableRef.rows.length > 0 )
+								 {
+								  tableRef.deleteRow(0);
+								 }
+								}
+								
+								function fixedStatus(id){
+										var xhrTwo = new XMLHttpRequest();
+										xhrTwo.open("GET", 'http://107.22.214.135:3001/status/'+id+'/3', false);
+										xhrTwo.send(null);
+										
+										window.location.href = "road-tables.html"
+										return xhrTwo.responsiveText;																											
+								}
+								
+								function suspendedStatus(id){
+										var xhrTwo = new XMLHttpRequest();
+										xhrTwo.open("GET", 'http://107.22.214.135:3001/status/'+id+'/2', false);
+										xhrTwo.send(null);
+										
+										window.location.href = "road-tables.html"
+										return xhrTwo.responsiveText;																											
+								}
+								
+							</script>
+                            
+                        </tbody>
+                   </table>  
+				
                 
-              <div class="clearfix"></div>
-              </div>
+                  <div class="clearfix"></div>
+                  </div>
               
               </div>
               <!--Example Table END-->

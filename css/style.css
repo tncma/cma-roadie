@@ -104,9 +104,9 @@ table.table {
 }
 .logo {
 	background:url(../images/logo.png) no-repeat;
-	background-size:102px 23px;
+	background-size:150px 27px;
 	display:block;
-	width:102px;
+	width:150px;
 	height:23px;
 	margin-top:19px;
 	margin-left:20px;
@@ -1452,6 +1452,7 @@ a.link_pagination.right{
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
+	margin-right:3px;
 }
 .s_blue {
 	background:#2d8aeb;
@@ -1460,6 +1461,7 @@ a.link_pagination.right{
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
+	margin-right:3px;
 }
 .s_orange {
 	background:#ffa93c;
@@ -1468,6 +1470,7 @@ a.link_pagination.right{
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
+	margin-right:3px;
 }
 .s_gray {
 	background:#6d6d6d;
@@ -1476,6 +1479,7 @@ a.link_pagination.right{
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
+	margin-right:3px;
 }
 .right_info { display:block; float:right;}
 .table-mod-2 tr td.t_b_blue { border-left:2px solid #2d8aeb;}

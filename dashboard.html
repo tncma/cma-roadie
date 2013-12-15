@@ -35,6 +35,23 @@
     <script language="JavaScript">
 	Firefox = navigator.userAgent.indexOf("Firefox") >= 0;
 	if(Firefox) document.write("<link rel='stylesheet' href='css/moz.css' type='text/css'>"); 
+    function retreiveDashboard(){
+				
+									
+									var xhr = new XMLHttpRequest();
+									xhr.onreadystatechange = function() {
+											 var text = xhr.responseText;
+											 console.log(typeof text);
+											 text = JSON.parse(text);
+											 $("#roadCnt").text(text[0].total);
+											 $("#lightCnt").text(text[1].total);
+											 $("#sewageCnt").text(text[2].total);
+									}	
+									xhr.open('GET', 'http://107.22.214.135:3001/count', true);
+									
+									xhr.send(null);
+									
+								}
 	</script>
     
     <!-- Le fav and touch icons -->
@@ -42,7 +59,7 @@
     
   </head>
 
-  <body>
+  <body onLoad="retreiveDashboard()">
     <!--BEGIN HEADER-->
     <div id="header" role="banner">
        <a id="menu-link" class="head-button-link menu-hide" href="#menu"><span>Menu</span></a>
@@ -70,10 +87,10 @@
             <a href="#" class="box">
               <div class="avatar"><img src="images/avatar-2.png" alt=""></div>
               <div class="info">
-                <div class="author">Csaba Gyulai</div>
+                <div class="author">Karthikeyan Sukumaran</div>
                 <div class="date">Jan 9, 2013</div>
                 <div class="clearfix"></div>
-                <div class="text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit.</div>
+                <div class="text">Street light in Kandanchavadi has been fixed</div>
               </div>
               <div class="clearfix"></div>
             </a>
@@ -83,10 +100,10 @@
             <a href="#" class="box">
               <div class="avatar"><img src="images/avatar-3.png" alt=""></div>
               <div class="info">
-                <div class="author">Junkyard Sam</div>
+                <div class="author">Yokesh</div>
                 <div class="date">Jan 15, 2013</div>
                 <div class="clearfix"></div>
-                <div class="text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit.</div>
+                <div class="text">The sewage problem in my area is still not fixed</div>
               </div>
               <div class="clearfix"></div>
             </a>
@@ -96,10 +113,10 @@
             <a href="#" class="box">
               <div class="avatar"><img src="images/avatar-4.png" alt=""></div>
               <div class="info">
-                <div class="author">Lienke Raben</div>
+                <div class="author">Venkateshwaran Loganathan</div>
                 <div class="date">Nov 4, 2012</div>
                 <div class="clearfix"></div>
-                <div class="text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit.</div>
+                <div class="text">Reported a damaged road in Selaiyur</div>
               </div>
               <div class="clearfix"></div>
             </a>
@@ -209,14 +226,14 @@
     </div>
     <!--END HEADER-->
     <script>
-		function retreiveRoadList(){
-			$.ajax({url:"http://10.11.96.251:3001/list/road",success:function(result){
+		/*function retreiveRoadList(){
+			$.ajax({url:"http://107.22.214.135:3001/list/road",success:function(result){
 			for(index in result){
 				$("#road-table-row").append("<tr><td>"+result[index].emailid+"<tr><td>");
 			}	
 		  }});
 		
-		}
+		}*/
 	</script>
     <div id="wrap"> 
     	<!--BEGIN SIDEBAR-->
@@ -224,7 +241,7 @@
         
           <ul class="main-menu">
              <li class="active"><a href="dashboard.html"><i class="general"></i> General</a></li>
-             <li><a href="road-tables.html" onClick="retreiveRoadList()"><i class="components"></i> Roads</a></li>
+             <li><a href="road-tables.html"><i class="components"></i> Roads</a></li>
              <li><a href="light-tables.html"><i class="forms"></i> Light</a></li>
              <li><a href="sewage-tables.html"><i class="statistics"></i> Sewage</a></li>
              <!--<li><a href="typo.html"><i class="pages"></i> Pages</a></li>
@@ -237,91 +254,7 @@
              <li><a href="gallery.html"><i class="icon-picture"></i> Image gallery</a></li>
              <li><a href="icons.html"><i class="icon-star"></i> Icons</a></li>
              <li><a href="calendar.html"><i class="icon-calendar"></i> Calendar</a></li>-->
-          </ul>
-          
-                    <!--New Files-->
-         <!-- <div class="new-files">
-             <div class="title">New Files</div>
-             
-             <div class="files">
-               <div class="file">
-                  <div class="file-format"><img src="images/icon/file_pdf.png" alt=""></div>
-                  <div class="file-info">
-                    <div class="file-name">Mani_CV.pdf <a href="#"><i class="icon-remove"></i></a></div>
-                    <div class="file-date">January 30, 2013</div>
-                  </div>
-                </div>
-                <div class="file">
-                  <div class="file-format"><img src="images/icon/file_doc.png" alt=""></div>
-                  <div class="file-info">
-                    <div class="file-name">Mani_CV.doc <a href="#"><i class="icon-remove"></i></a></div>
-                    <div class="file-date">January 30, 2013</div>
-                  </div>
-                </div>
-                <div class="file">
-                  <div class="file-format"><img src="images/icon/file_jpg.png" alt=""></div>
-                  <div class="file-info">
-                    <div class="file-name">Mani_CV.jpg <a href="#"><i class="icon-remove"></i></a></div>
-                    <div class="file-date">January 30, 2013</div>
-                  </div>
-                </div>
-                <div class="file">
-                  <div class="file-format"><img src="images/icon/file_xls.png" alt=""></div>
-                  <div class="file-info">
-                    <div class="file-name">Mani_CV.xls <a href="#"><i class="icon-remove"></i></a></div>
-                    <div class="file-date">January 30, 2013</div>
-                  </div>
-                </div>
-                <div class="file">
-                  <div class="file-format"><img src="images/icon/file_zip.png" alt=""></div>
-                  <div class="file-info">
-                    <div class="file-name">Mani_CV.zip <a href="#"><i class="icon-remove"></i></a></div>
-                    <div class="file-date">January 30, 2013</div>
-                  </div>
-                </div>
-                <div class="file">
-                  <div class="file-format"><img src="images/icon/file_txt.png" alt=""></div>
-                  <div class="file-info">
-                    <div class="file-name">Mani_CV.txt <a href="#"><i class="icon-remove"></i></a></div>
-                    <div class="file-date">January 30, 2013</div>
-                  </div>
-                </div>
-               
-             </div>
-          </div>-->
-          <!--New Files END-->
-          
-          <!--Upload Box-->
-         <!-- <div class="upload-box">Drop files <br> here to upload</div>-->
-          <!--Upload Box END-->
-          
-          <!--Media Files-->
-         <!-- <div class="media-files">
-             <div class="title">Media Files</div>
-             <p>This is Photoshop's version  of Lorem Ipsum.</p>
-             
-             <div class="media-files-info-box">
-                <i class="icon-picture"></i> Photo <strong>35%</strong>
-                <div class="process-progress"> <div class="advance red" style="width:35%"></div> </div> 
-             </div>
-             <div class="media-files-info-box">
-                <i class="icon-facetime-video"></i> Video <strong>43%</strong>
-                <div class="process-progress"> <div class="advance blue" style="width:43%"></div> </div> 
-             </div>
-             <div class="media-files-info-box">
-                <i class="icon-music"></i> Audio <strong>23%</strong>
-                <div class="process-progress"> <div class="advance green" style="width:23%"></div> </div>
-             </div>
-          </div>-->
-          <!--Media Files END-->
-          
-          <!--Add New Widget-->
-          <!--<a href="#" class="add-widget-link">Add New Widget</a>-->
-          <!--Add New Widget END-->
-          
-         <!-- <div class="clearfix"></div>-->
-          
-          
+          </ul>  
         </div>
         <!--SIDEBAR END-->
     
@@ -342,25 +275,25 @@
                 <div class="clearfix"></div>
              </div>
              <!--page title end-->
-             
+           
              <!-- info-box -->
              <div class="info-box">
                <div class="row-fluid stats-box">
                   <div class="span4">
                   	<div class="stats-box-title">Road complaints</div>
-                    <div class="stats-box-all-info"><img src="images/icon/icon_vizitors_stats.png" alt=""> 365</div>
+                    <div class="stats-box-all-info"><img src="images/icon/icon_vizitors_stats.png" alt=""> <span id="roadCnt"></span></div>
                     <div class="wrap-chart"><div id="visitor-stat" class="chart"></div></div>
                   </div>
                   
                   <div class="span4">
                     <div class="stats-box-title">Light complaints</div>
-                    <div class="stats-box-all-info"><img src="images/icon/icon_like_stats.png" alt=""> 35</div>
+                    <div class="stats-box-all-info"><img src="images/icon/icon_like_stats.png" alt=""> <span id="lightCnt"></span></div>
                     <div class="wrap-chart"><div id="order-stat" class="chart"></div></div>
                   </div>
                   
                   <div class="span4">
                     <div class="stats-box-title">Sewage complaints</div>
-                    <div class="stats-box-all-info"><img src="images/icon/icon_orders_stats.png" alt=""> 12</div>
+                    <div class="stats-box-all-info"><img src="images/icon/icon_orders_stats.png" alt=""> <span id="sewageCnt"></span></div>
                     <div class="wrap-chart"><div id="user-stat" class="chart"></div></div>
                   </div>
                </div>

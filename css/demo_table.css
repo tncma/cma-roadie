@@ -216,7 +216,8 @@ th:active {
 }
 
 .dataTables_empty {
-	text-align: center;
+	/*text-align: center;*/
+	display:none !important;
 }
 
 tfoot input {
