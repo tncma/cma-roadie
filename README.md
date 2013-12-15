@@ -29,5 +29,5 @@ Team Details :
       Sourav Biswas, 
       Ajeeth Boaz P.O 
 
-Link to Presentation: (Not-completed)
+Link to Presentation:
       http://www.youtube.com/watch?v=d8rX80A2VE8&feature=em-upload_owner
